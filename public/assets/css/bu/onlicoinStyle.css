@@ -1,0 +1,269 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+/*--------------------------Header Start---------------------------------*/
+
+#onlicoinlogo {
+    height: 60px;
+    padding: 10px 10px 5px 10px;
+}
+
+.exchangeRate {
+    text-align: center;
+}
+
+.exchangeRate ul {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.exchangeRate li {
+    padding: 2px 10px;
+    list-style-type: none;
+    float: left;
+}
+
+.exchangeRate h4,
+.exchangeRate h5 {
+    color: white;
+    margin: 4px 4px;
+}
+
+#topnav .topbar-main {
+    background-color: #0f75bc;
+}
+
+.nav-links li {
+    display: inline;
+    height: 100%;
+    line-height: 50px;
+
+}
+
+.nav-links {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    top: 5px;
+}
+
+.nav-links img {
+    height: 30px;
+    width: 30px;
+}
+
+#main > div:nth-child(3) > ul > li:nth-child(2) > p {
+    color: white;
+}
+
+.about {
+    text-align: center;
+}
+
+/*-------------------------------next page-------------------------------*/
+#blue_oc_logo img {
+    height: 100px;
+}
+
+/*-------------------------------register page-------------------------------*/
+#reg-nav-links {
+    margin-bottom: 0px !important;
+}
+
+#reg-nav-links li {
+    list-style-type: none;
+    float: left;
+    padding: 5px 18px;
+    line-height: 50px;
+}
+
+#reg-nav-links a {
+    color: white;
+}
+
+/*
+.reg-main {
+    height: 700px;
+}
+*/
+
+/*----------------------------Header End----------------------------------*/
+
+/*----------------------------Navbar Start--------------------------------*/
+#navbar > ul > li > a > img {
+    height: 90px;
+    width: 90px;
+}
+
+#navbar > ul {
+    text-align: center;
+    padding: 0px;
+    margin: 1%;
+}
+
+#navbar > ul > li {
+    margin: 0% 2%;
+    display: inline;
+}
+
+#topnav .navbar-custom {
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+/*----------------------------Navbar End----------------------------------*/
+
+/*----------------------------Content Start-------------------------------*/
+body > div > div {
+    margin-top: 45px;
+}
+
+.card-box {
+    border: 2px solid black;
+    position: relative;
+}
+
+#coin_in,
+#coin_out {
+    width: 100%;
+}
+
+.panel-name {
+    position: absolute;
+    background-color: #0f75bc;
+    padding: 8px;
+    top: -14px;
+    left: -11px;
+    border-radius: 5px;
+    color: white;
+}
+
+#index-wrap {
+    width: 800px;
+    margin: auto;
+    padding-top: 35px;
+}
+
+/*-------------------------------login page-------------------------------*/
+#loginwrap {
+    padding-top: 75px
+}
+
+#cb-login {
+    width: 350px;
+    margin: auto;
+    height: 440px;
+}
+
+/*-------------------------------payment page-------------------------------*/
+#cb-payment {
+    width: 600px;
+    margin: auto;
+    height: 500px;
+}
+
+#cb-payment img {
+    width: 45px;
+    height: 45px;
+}
+
+#paymentwrap {
+    padding-top: 32px;
+    padding-bottom: 26px;
+}
+
+/*-------------------------------register page-------------------------------*/
+.testimonials img {
+    height: 80px;
+    width: 80px;
+}
+
+.testimonials {
+    margin: 90px 0px;
+}
+
+.reg-main {
+    margin-bottom: 190px;
+}
+
+/*----------------------------Content End---------------------------------*/
+
+/*----------------------------Footer Start--------------------------------*/
+#foot {
+    background: #0f75bc;
+    color: white;
+}
+
+#foot2 {
+    background: #0f75bc;
+    color: white;
+    padding: 15px 0px;
+}
+
+#foot2 h4 {
+    color: white;
+}
+
+.footer ul li a {
+    color: white;
+}
+
+.footer ul li a:hover {
+    color: yellow;
+}
+
+/*social media logos*/
+#foot > div > div > div:nth-child(3) > ul > li > a > img {
+    width: 20px;
+    height: 20px;
+}
+
+.social img {
+    margin: 0% 1%;
+}
+
+.copyright,
+.copyright a {
+    color: white;
+}
+
+/*----------------------------Footer End----------------------------------*/
+/*----------------------------Media Queries Start----------------------------------*/
+@media (max-width:1199px) {
+    #topnav .topbar-main .nav > li > a {
+        padding: 0px 2px;
+    }
+}
+
+@media (max-width:767px) {
+    #main > div > div.col-sm-7 > div > ul {
+        display: none;
+    }
+
+    #navbar > ul > li {
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width:991px) {
+    .wrapper {
+        padding-top: 166px;
+    }
+}
+
+/*----------------------------Media Queries End----------------------------------*/

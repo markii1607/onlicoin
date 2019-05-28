@@ -1,0 +1,140 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+}
+
+#onlicoinlogo {
+    height: 83px;
+    padding: 8px 8px 5px 8px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.exchange ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#topnav .topbar-main {
+    background-color: #5d9cec;
+}
+
+#topnav > div.topbar-main > div > div > div.col-md-7 > div > ul > li {
+    padding: 0px 15px;
+}
+
+#main > div > div.col-sm-3 {
+    margin-top: 10px;
+}
+
+.exchange h3,
+.exchange h4 {
+    color: white;
+}
+
+#topnav > div > div.container > div > div.col-md-3 > div > ul > li > a {
+    margin: 11px 0px;
+}
+
+#foot {
+    background: #5d9cec;
+    font-size: 15px;
+    color: white;
+}
+
+#foot > div > div > div.col-xs-4 > ul > li > a {
+    color: white;
+}
+
+#navbar > ul > li > a > img {
+    height: 90px;
+    width: 90px;
+}
+
+#navbar > ul {
+    text-align: center;
+    padding: 0px;
+    margin: 12px
+}
+
+#navbar > ul > li {
+    margin: 0px 30px;
+}
+
+#topnav .navbar-custom {
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+body > div > div {
+    margin-top: 45px;
+}
+
+.card-box {
+    border: 2px solid black;
+    position: relative;
+}
+
+#coin_in,
+#coin_out {
+    width: 100%;
+}
+
+.panel-name {
+    position: absolute;
+    background-color: #5d9cec;
+    padding: 10px;
+    top: -14px;
+    left: -11px;
+    border-radius: 5px;
+    color: white;
+}
+
+.footer ul li a {
+    color: white;
+}
+
+.footer ul li a:hover {
+    color: yellow;
+}
+
+#foot > div > div > div:nth-child(3) > ul > li > a > img {
+    width: 25px;
+    height: 25px;
+}
+
+.menu-extras {
+    margin-left: 20px;
+}
+
+#main > div > div.col-sm-7 > div > ul > li {
+    padding: 0px 10px;
+}
+
+#topnav .topbar-main .nav > li > a {
+    padding: 0px 5px;
+}
+
+@media (max-width:1199px) {
+    .menu-extras {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width:767px) {
+    #main > div > div.col-sm-7 > div > ul {
+        display: none;
+    }
+
+    #navbar > ul > li {
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width:991px) {
+    .wrapper {
+        padding-top: 166px;
+    }
+}
