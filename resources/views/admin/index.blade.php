@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="assets/images/favicon_1.ico">
-    <title>Onlicoin</title>
-
-    <link rel="stylesheet" href="assets/plugins/morris/morris.css">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/onlicoinStyle.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="assets/js/modernizr.min.js"></script>
-</head>
-
-<body>
+@extends('master')
+@section('header')
     <header id="topnav">
         <div class="topbar-main">
             <div id="main" class="container">
@@ -79,6 +58,9 @@
             </div> <!-- end container -->
         </div> <!-- end navbar-custom -->
     </header>
+@stop  
+
+@section('content')    
     <div class="wrapper">
         <div class="container" id="index-wrap">
             <div class="row">
@@ -314,6 +296,9 @@
 
                 </div>
             </div>
+        </div>
+    </div>
+@stop 
             <!--        footer-->
             <footer id="foot" class="footer">
                 <div class="container">

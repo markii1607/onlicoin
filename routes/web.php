@@ -27,3 +27,5 @@ Route::get('/auth-cout_manage_funds', 'PagesController@cout_manage_funds')->name
 Route::get('/auth-cout_payment', 'PagesController@cout_payment')->name('auth-cout_payment');
 Route::get('/auth-cout_remittance', 'PagesController@cout_remittance')->name('auth-cout_remittance');
 Route::get('/auth-cout_transfer', 'PagesController@cout_transfer')->name('auth-cout_transfer');
+
+Auth::routes();
