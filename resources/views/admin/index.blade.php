@@ -1,98 +1,45 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
-    <meta name="author" content="Coderthemes">
-
-    <link rel="shortcut icon" href="assets/images/favicon_1.ico">
-
-    <title>Onlicoin</title>
-
-    <!--Morris Chart CSS -->
-    <link rel="stylesheet" href="assets/plugins/morris/morris.css">
-
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/onlicoinStyle.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-
-    <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-    <script src="assets/js/modernizr.min.js"></script>
-
-</head>
-
-
-<body>
-
-
-    <!-- Navigation Bar-->
+@extends('master')
+@section('header')
     <header id="topnav">
         <div class="topbar-main">
             <div id="main" class="container">
-                <div class="row">
-                    <div class="col-sm-2 container-fluid">
-                        <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
-                    </div>
-                    <div class="col-sm-7 exchangeRate container-fluid">
-                        <ul>
-                            <li>
-                                <h4 class="inline-block">USD</h4>
-                                <h5 class="inline-block">$0.80</h5>
-                            </li>
-                            <li>
-                                <h4>BTC</h4>
-                                <h5>$4,001.81</h5>
-                            </li>
-                            <li>
-                                <h4>ETH</h4>
-                                <h5>$137.48</h5>
-                            </li>
-                            <li>
-                                <h4>OCT</h4>
-                                <h5>$0.80</h5>
-                            </li>
-                            <li>
-                                <h4 class="inline-block">EUR</h4>
-                                <h5 class="inline-block">$0.60</h5>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3">
-                        <ul class="nav-links">
-                            <li>
-                                <a href="" data-toggle="dropdown" aria-expanded="true"><img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle">
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="" data-toggle="dropdown" aria-expanded="true"><img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle">
-                                    <p class="inline-block">Michael Alcala</p>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)"><i class="ti-user text-custom m-r-10"></i> Profile</a></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-settings text-custom m-r-10"></i> Settings</a></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-lock text-custom m-r-10"></i> Lock screen</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-power-off text-danger m-r-10"></i> Logout</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-sm-3" id="logo">
+                    <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
+                </div>
+                <div class="col-sm-6 exchangeRate" id="exchangeRates">
+                    <ul>
+                        <li>
+                            <h4>USD</h4>
+                            <h5>$0.80</h5>
+                        </li>
+                        <li>
+                            <h4>BTC</h4>
+                            <h5>$4,001.81</h5>
+                        </li>
+                        <li>
+                            <h4>ETH</h4>
+                            <h5>$137.48</h5>
+                        </li>
+                        <li>
+                            <h4>OCT</h4>
+                            <h5>$0.80</h5>
+                        </li>
+                        <li>
+                            <h4>EUR</h4>
+                            <h5>$0.60</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3" id="">
+                    <ul class="nav-links pull-right">
+                        <li>
+                            <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle">
+                        </li>
+                        <li>
+                            <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle">
+                            <p class="inline-block">Michael Alcala</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -101,21 +48,21 @@
             <div class="container">
                 <div id="navbar">
                     <ul>
-                        <li class="inline-block"><a href=""><img src="assets/images/samp.png" alt="My Wallet"></a></li>
-                        <li class="inline-block"><a href=""><img src="assets/images/samp.png" alt="Earnings"></a></li>
-                        <li class="inline-block"><a href=""><img src="assets/images/samp.png" alt="Merchant Partners"></a></li>
-                        <li class="inline-block"><a href=""><img src="assets/images/samp.png" alt="Buy / Sell"></a></li>
-                        <li class="inline-block"><a href=""><img src="assets/images/samp.png" alt="Subscribers"></a></li>
+                        <li><a href="{{ route('auth-index') }}"><img src="assets/images/samp.png" alt="My Wallet"></a></li>
+                        <li><a href="#"><img src="assets/images/samp.png" alt="Earnings"></a></li>
+                        <li><a href="#"><img src="assets/images/samp.png" alt="Merchant Partners"></a></li>
+                        <li><a href="#"><img src="assets/images/samp.png" alt="Buy / Sell"></a></li>
+                        <li><a href="#"><img src="assets/images/samp.png" alt="Subscribers"></a></li>
                     </ul>
                 </div>
             </div> <!-- end container -->
         </div> <!-- end navbar-custom -->
     </header>
-    <!-- End Navigation Bar-->
+@stop  
 
-
+@section('content')    
     <div class="wrapper">
-        <div class="container">
+        <div class="container" id="index-wrap">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="card-box">
@@ -141,10 +88,10 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <button id="coin_in" class="inline-block"><img src="" alt="coin in"></button>
+                                <a href="{{ route('auth-cin_remittance') }}"><button class=" btn btn-primary">COIN IN</button></a>
                             </div>
                             <div class="col-sm-6">
-                                <button id="coin_out" class="inline-block"><img src="" alt="coin out"></button>
+                                <a href="{{ route('auth-cout_remittance') }}"><button class=" btn btn-primary">COIN OUT</button></a>
                             </div>
                         </div>
                     </div>
@@ -158,8 +105,8 @@
                                 <td>
                                     <p>Ismael wants to verify your account.</p>
                                 </td>
-                                <td><button class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                <td><button class="btn btn-danger"><i class="fa fa-times"></i></button></td>
+                                <td><button class="btn btn-reverse"><i class="fa fa-check"></i></button></td>
+                                <td><button class="btn btn-reverse"><i class="fa fa-times"></i></button></td>
                             </tr>
                             <tr>
                                 <td>
@@ -168,8 +115,8 @@
                                 <td>
                                     <p>Mark wants to verify your account.</p>
                                 </td>
-                                <td><button class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                <td><button class="btn btn-danger"><i class="fa fa-times"></i></button></td>
+                                <td><button class="btn btn-reverse"><i class="fa fa-check"></i></button></td>
+                                <td><button class="btn btn-reverse"><i class="fa fa-times"></i></button></td>
                             </tr>
                             <tr>
                                 <td>
@@ -178,8 +125,8 @@
                                 <td>
                                     <p>Kenn wants to verify your account.</p>
                                 </td>
-                                <td><button class="btn btn-success"><i class="fa fa-check"></i></button></td>
-                                <td><button class="btn btn-danger"><i class="fa fa-times"></i></button></td>
+                                <td><button class="btn btn-reverse"><i class="fa fa-check"></i></button></td>
+                                <td><button class="btn btn-reverse"><i class="fa fa-times"></i></button></td>
                             </tr>
                         </table>
                     </div>
@@ -349,7 +296,11 @@
 
                 </div>
             </div>
-            <footer id="foot" class="footer text-right">
+        </div>
+    </div>
+@stop 
+            <!--        footer-->
+            <footer id="foot" class="footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-3">
@@ -382,13 +333,13 @@
                         <div class="col-sm-3">
                             <ul class="pull-right list-inline inline-block m-b-0">
                                 <li>
-                                    <a href="#"><img src="assets/images/fb-icon-oct.png" alt="Facebook"></a>
+                                    <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/fb-icon-oct.png" alt="Facebook"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="assets/images/twitter-icon-oct.png" alt="Twitter"></a>
+                                    <a href="https://twitter.com/onlicointoken"><img src="assets/images/twitter-icon-oct.png" alt="Twitter"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="assets/images/linkedin-icon-oct.png" alt="LinkedIn"></a>
+                                    <a href="https://www.linkedin.com/company/onlicoin"><img src="assets/images/linkedin-icon-oct.png" alt="LinkedIn"></a>
                                 </li>
                             </ul>
                         </div>
@@ -398,9 +349,7 @@
         </div>
     </div>
 
-
-
-    <!-- jQuery  -->
+    <!--    scripts-->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/detect.js"></script>
@@ -428,21 +377,6 @@
 
     <script src="assets/js/jquery.core.js"></script>
     <script src="assets/js/jquery.app.js"></script>
-
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $('.counter').counterUp({
-                delay: 100,
-                time: 1200
-            });
-
-            $(".knob").knob();
-
-        });
-
-    </script>
-
-
 </body>
 
 </html>

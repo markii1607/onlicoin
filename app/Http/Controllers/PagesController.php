@@ -9,51 +9,66 @@ use App\Http\Requests;
 class PagesController extends Controller
 {
     public function index () {
-    	return view('index');
+    	return view('admin.index');
     }
+
     public function login () {
-    	return view('login');
+    	return view('pages.login');
     }
+
     public function verify () {
-    	return view('verify');
+    	return view('pages.verify');
     }
+
     public function payment () {
-    	return view('payment');
+    	return view('pages.payment');
     }
+
     public function register () {
-    	return view('register');
+    	return view('pages.register');
     }
+
     public function landing () {
-    	return view('landing');
+    	return view('pages.landing');
     }
+
     public function about () {
-    	return view('about');
+    	return view('pages.about');
     }
+
     public function cin_buy_oct () {
-    	return view('cin_buy_oct');
+    	return view('admin.cin_buy_oct');
     }
+
     public function cin_manage_funds () {
-    	return view('cin_manage_funds');
+    	return view('admin.cin_manage_funds');
     }
+
     public function cin_payment () {
-    	return view('cin_payment');
+    	return view('admin.cin_payment');
     }
+
     public function cin_remittance () {
-    	return view('cin_remittance');
+    	return view('admin.cin_remittance');
     }
+
     public function cout_remittance () {
-    	return view('cout_remittance');
+    	return view('admin.cout_remittance');
     }
+
     public function cout_manage_funds () {
-    	return view('cout_manage_funds');
+    	return view('admin.cout_manage_funds');
     }
+
     public function cout_payment () {
-    	return view('cout_payment');
+    	return view('admin.cout_payment');
     }
+
     public function cout_sell_oct () {
-    	return view('cout_sell_oct');
+    	return view('admin.cout_sell_oct');
     }
+
     public function cout_transfer () {
-    	return view('cout_transfer');
+    	return view('admin.cout_transfer');
     }
 }
