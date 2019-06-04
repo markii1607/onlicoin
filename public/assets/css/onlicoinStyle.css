@@ -172,6 +172,9 @@ body > div > div {
     height: 440px;
 }
 
+/*-------------------------------landing page-------------------------------*/
+
+
 /*-------------------------------payment page-------------------------------*/
 #cb-payment {
     width: 600px;
@@ -209,9 +212,9 @@ body > div > div {
 
 /*-------------------------------coin in buy oct page-------------------------------*/
 #coin-in-nav img {
-    height: 70px;
-    width: 70px;
-    margin: 0px 5px;
+    height: 24%;
+    width: 24%;
+    margin: 0;
 }
 
 .inp-fields input {
@@ -224,6 +227,7 @@ body > div > div {
 
 #proc-button button {
     width: 45%;
+    border-radius: 5px;
 }
 
 /*-------------------------------coin out remittance page-------------------------------*/

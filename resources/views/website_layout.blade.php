@@ -26,6 +26,7 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/aos.css" rel="stylesheet">
 
 </head>
 
@@ -56,6 +57,11 @@
 
     <!--common script for all pages-->
     <script src="assets/js/jquery.app.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script type="text/javascript">
+        AOS.init();
+
+    </script>
 
     <script type="text/javascript">
         $('.owl-carousel').owlCarousel({
@@ -73,4 +79,5 @@
 
     </script>
 </body>
+
 </html>
