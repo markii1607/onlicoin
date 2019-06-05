@@ -134,7 +134,16 @@ a:focus,
     height: 100%;
     width: 100%;
     top: 0;
-    background-color: rgba(60, 64, 70, 0.9);
+    background-color: rgba(60, 64, 70, 0.35);
+    /*background-color: rgba(93, 156, 236, 0.9);*/
+}
+
+.bg-overlay-testimonial {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(60, 64, 70, 0.7);
     /*background-color: rgba(93, 156, 236, 0.9);*/
 }
 
@@ -164,9 +173,17 @@ a:focus,
 
 /* Background Images */
 .bg-img-1 {
-    background: url("../images/bg.jpg") no-repeat;
+    background: url("../images/site-cover.jpg") no-repeat;
     background-size: cover;
     position: relative;
+    background-position: center;
+}
+
+.bg-testimonial {
+    background: url("../images/testimonial-bg.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
 }
 
 /*======= 3.Buttons ======= */
@@ -209,6 +226,22 @@ a:focus,
     letter-spacing: 0.04em;
 }
 
+.btn-signup {
+    padding: 8px 24px !important;
+    background-color: white !important;
+    border: 2px solid rgba(255, 255, 255, 0.75) !important;
+    color: #5d9cec;
+    border-radius: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.btn-signup:hover {
+    background-color: transparent !important;
+    color: white !important;
+}
+
 .btn-black-bordered {
     padding: 8px 24px !important;
     background-color: #0f75bc !important;
@@ -229,6 +262,8 @@ a:focus,
     background-color: #ffffff !important;
     color: #5d9cec !important;
 }
+
+
 
 .btn-custom {
     padding: 8px 24px !important;
@@ -979,11 +1014,11 @@ textarea.form-control {
 #foot2 {
     background: #0f75bc;
     color: white;
-    padding: 15px 0px;
+    padding: 3% 0%;
 }
 
 #foot2 h4,
-a {
+#foot2 a {
     color: white;
 }
 
