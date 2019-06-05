@@ -14,7 +14,7 @@ class CreateWallets1Table extends Migration
     {
         Schema::create('wallets', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->nullable();
             $table->decimal('wallet_amount',12,12);
             $table->string('wallet_address', 255);
             $table->string('wallet_category', 255);

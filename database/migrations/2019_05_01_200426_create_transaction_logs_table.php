@@ -14,7 +14,7 @@ class CreateTransactionLogsTable extends Migration
     {
         Schema::create('transaction_logs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->nullable();
             $table->datetime('transact_date');
             $table->string('transact_desc',255);
             $table->decimal('transact_amount',12,12);

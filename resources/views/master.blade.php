@@ -22,6 +22,8 @@
 
 <body>
 
+    @include('sweetalert::alert')
+
     @yield('header')
 
     @yield('content')

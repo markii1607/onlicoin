@@ -36,10 +36,10 @@
                         <a href="#pricing" class="nav-link">ABOUT US</a>
                     </li>
                     <li>
-                        <a href="{{route('auth-login')}}" class="nav-link">LOGIN</a>
+                        <a href="{{route('login')}}" class="nav-link">LOGIN</a>
                     </li>
                     <li>
-                        <a href="{{route('auth-register')}}" class="btn btn-white-bordered navbar-btn">SIGN UP</a>
+                        <a href="{{route('register')}}" class="btn btn-white-bordered navbar-btn">SIGN UP</a>
                     </li>
                 </ul>
 
@@ -68,7 +68,7 @@
                                     <!--                                    <h1><i>Onlicoin - The Next Generation Online Currency</i></h1>-->
                                     <!--                                    <h1><i>Remittance and Investment Services All in One Place</i></h1>-->
                                     <div class="bsign-up">
-                                        <button class="btn btn-primary btn-white-bordered"><a href="{{route('auth-register')}}">SIGN UP</a></button>
+                                        <button class="btn btn-primary btn-white-bordered"><a href="{{route('register')}}">SIGN UP</a></button>
                                     </div>
                                 </div>
                                 <div class="col-sm-5">
@@ -223,7 +223,7 @@
                 </div>
             </div> <!-- end row -->
             <div class="text-center">
-                <button id="bottom-signup" class="btn btn-black-bordered navbar-btn"> <a href="{{ route('auth-register') }}">SIGN UP</a></button>
+                <button id="bottom-signup" class="btn btn-black-bordered navbar-btn"> <a href="{{ route('register') }}">SIGN UP</a></button>
             </div>
         </div> <!-- end container -->
     </section>

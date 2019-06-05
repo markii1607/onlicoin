@@ -32,6 +32,8 @@
 
 <body data-spy="scroll" data-target="#navbar-menu">
 
+    @include('sweetalert::alert')
+    
     @yield('header')
 
     @yield('content')

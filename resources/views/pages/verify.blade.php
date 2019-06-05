@@ -12,9 +12,18 @@
 @stop
 
 @section('content')
+    <style>
+        #code {
+            text-transform: uppercase;
+        }
+
+        #code::placeholder {
+            text-transform: none;
+        }
+    </style>
     <div class="wrapper" id="loginwrap">
         <div class="container">
-            <form>
+            <form method="POST" action="{{ route('auth-verify') }}">
                 {{ csrf_field() }}
                 <div class="card-box about" id="cb-login">
                     <div id="blue_oc_logo">
@@ -25,16 +34,16 @@
                     <h5>We sent you an email</h5>
                     <h6>To verify your registration, enter your verification code below.</h6>
                     <br />
-                    <div class="form-group{{ $errors->has('code_mail') ? ' has-error' : '' }}">
-                        <input id="code_mail" type="text" placeholder="Enter Code Here..." class="form-control" name="code_mail" value="{{ old('code_mail') }}" required autofocus>
+                    <div class="form-group{{ $errors->has('code') ? ' has-error' : '' }}">
+                        <input id="code" type="text" placeholder="Enter Code Here..." class="form-control" name="code" value="{{ old('code') }}" required autofocus>
 
-                        @if ($errors->has('code_mail'))
+                        @if ($errors->has('code'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('code_mail') }}</strong>
+                                <strong>{{ $errors->first('code') }}</strong>
                             </span>
                         @endif
                     </div>
-                    <button class="btn btn-reverse"><a href="{{ route('auth-payment') }}">Verify</a></button>
+                    <button class="btn btn-reverse" type="submit">Verify</button>
                     <br />
                     <br />
                     <h6>Didn't receive any email? <a href="#"><b>Resend email</b></a></h6>

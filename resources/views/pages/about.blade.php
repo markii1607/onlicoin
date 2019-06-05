@@ -36,10 +36,10 @@
                         <a href="#pricing" class="nav-link">ABOUT US</a>
                     </li>
                     <li>
-                        <a href="{{route('auth-login')}}" class="nav-link">LOGIN</a>
+                        <a href="{{route('login')}}" class="nav-link">LOGIN</a>
                     </li>
                     <li>
-                        <a href="{{route('auth-register')}}" class="btn btn-white-bordered navbar-btn">SIGN UP</a>
+                        <a href="{{route('register')}}" class="btn btn-white-bordered navbar-btn">SIGN UP</a>
                     </li>
                 </ul>
 
@@ -171,7 +171,7 @@
                 </div>
             </div> <!-- end row -->
             <div class="text-center">
-                <button id="bottom-signup" class="btn btn-black-bordered navbar-btn"> <a href="{{ route('auth-register') }}">SIGN UP</a></button>
+                <button id="bottom-signup" class="btn btn-black-bordered navbar-btn"> <a href="{{ route('register') }}">SIGN UP</a></button>
             </div>
         </div> <!-- end container -->
     </section>

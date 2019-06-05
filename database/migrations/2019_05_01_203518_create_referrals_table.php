@@ -14,10 +14,10 @@ class CreateReferralsTable extends Migration
     {
         Schema::create('referrals', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->nullable();
             $table->datetime('referred_date');
             $table->integer('referred_user');
-            $table->integer('referral_classification');
+            $table->integer('referral_classification')->nullable();
             $table->timestamps();
         });
     }
