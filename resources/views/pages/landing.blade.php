@@ -222,7 +222,7 @@
             </div>
         </div> <!-- end row -->
         <div class="text-center">
-            <a href="{{ route('auth-register') }}"><button data-aos="zoom-in-up" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
+            <a href="{{ route('register') }}"><button data-aos="zoom-in-up" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
         </div>
     </div> <!-- end container -->
 </section>

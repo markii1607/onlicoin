@@ -19,7 +19,7 @@ Route::get('logout', function() {
     return redirect('/login');
 });
 
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => ['auth', 'verifyUser']], function() {
     Route::get('/auth-verify', 'PagesController@verify')->name('auth-verify');
     Route::get('/auth-payment', 'PagesController@payment')->name('auth-payment');
     Route::get('/auth-index', 'PagesController@index')->name('auth-index');
@@ -36,3 +36,5 @@ Route::group(['middleware' => 'auth'], function() {
 
 // Post Routes
 Route::post('/auth-verify', 'PagesController@userVerify')->name('auth-verify');
+
+Route::get('try', 'TryController@index');
