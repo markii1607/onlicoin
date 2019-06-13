@@ -223,12 +223,6 @@
                 </div>
             </div>
         </div> <!-- end row -->
-<<<<<<< HEAD
-        <div class="text-center">
-            <a href="{{ route('register') }}"><button data-aos="zoom-in-up" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
-        </div>
-=======
->>>>>>> d7283e77e6b926e89d48a1fc07c85e1f80c50342
     </div> <!-- end container -->
 </section>
 <!--   End call to action  -->
