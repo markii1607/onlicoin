@@ -14,13 +14,18 @@ body {
     display: block;
 }
 
-/*--------------------------Header Start---------------------------------*/
+#blue_oc_logo img {
+    height: 100px;
+}
+
+/*Header Start*/
 
 #onlicoinlogo {
     height: 60px;
     padding: 10px 10px 5px 10px;
 }
 
+/*
 .exchangeRate {
     text-align: center;
 }
@@ -42,11 +47,17 @@ body {
     color: white;
     margin: 4px 4px;
 }
+*/
+.exchangRates {
+    padding: 10px 0px !important;
+    color: white;
+}
 
 #topnav .topbar-main {
     background-color: #0f75bc;
 }
 
+/*
 .nav-links li {
     display: inline;
     height: 100%;
@@ -61,26 +72,23 @@ body {
     position: relative;
     top: 5px;
 }
+*/
 
-.nav-links img {
+.extras img {
     height: 30px;
     width: 30px;
+}
+
+.extras {
+    padding: 15px 0px !important;
+    color: white;
 }
 
 #main > div:nth-child(3) > ul > li:nth-child(2) > p {
     color: white;
 }
 
-.about {
-    text-align: center;
-}
-
-/*-------------------------------next page-------------------------------*/
-#blue_oc_logo img {
-    height: 100px;
-}
-
-/*-------------------------------register page-------------------------------*/
+/*register page*/
 #reg-nav-links {
     margin-bottom: 0px !important;
 }
@@ -96,29 +104,34 @@ body {
     color: white;
 }
 
+/*Navbar Start*/
 /*
-.reg-main {
-    height: 700px;
-}
-*/
-
-/*----------------------------Header End----------------------------------*/
-
-/*----------------------------Navbar Start--------------------------------*/
 #navbar > ul > li > a > img {
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 80px;
+    margin: 10px 0px;
 }
 
 #navbar > ul {
     text-align: center;
-    padding: 0px;
-    margin: 1%;
+    padding: 0;
+    margin: 0;
 }
 
 #navbar > ul > li {
     margin: 0% 2%;
     display: inline;
+}
+*/
+.navbar img {
+    height: 70px;
+    width: 70px;
+    margin: 12px 20px;
+}
+
+
+.navbar {
+    background-color: #fff;
 }
 
 #topnav .navbar-custom {
@@ -126,24 +139,35 @@ body {
     box-shadow: none;
 }
 
-/*----------------------------Navbar End----------------------------------*/
+.current-value {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    font-size: 50px;
+}
 
-/*----------------------------Content Start-------------------------------*/
+.current-bal {
+    margin-top: 0px;
+}
+
+.cin-cout-btn {
+    margin-top: 15px;
+}
+
+.tbl {
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 12px;
+}
+
+/*Content Start*/
 body > div > div {
     margin-top: 45px;
 }
 
 .card-box {
-    border: 2px solid black;
+    border: 1px solid black;
     position: relative;
 }
-
-/*
-#coin_in,
-#coin_out {
-    width: 90%;
-}
-*/
 
 .panel-name {
     position: absolute;
@@ -151,8 +175,9 @@ body > div > div {
     padding: 8px;
     top: -14px;
     left: -11px;
-    border-radius: 5px;
+    /*    border-radius: 5px;*/
     color: white;
+    text-transform: uppercase;
 }
 
 #index-wrap {
@@ -161,7 +186,7 @@ body > div > div {
     padding-top: 35px;
 }
 
-/*-------------------------------login page-------------------------------*/
+/*login page*/
 #loginwrap {
     padding-top: 75px
 }
@@ -172,10 +197,7 @@ body > div > div {
     height: 440px;
 }
 
-/*-------------------------------landing page-------------------------------*/
-
-
-/*-------------------------------payment page-------------------------------*/
+/*payment page*/
 #cb-payment {
     width: 600px;
     margin: auto;
@@ -196,7 +218,7 @@ body > div > div {
     padding: 0px 7px;
 }
 
-/*-------------------------------register page-------------------------------*/
+/*register page*/
 .testimonials img {
     height: 80px;
     width: 80px;
@@ -210,7 +232,7 @@ body > div > div {
     margin-bottom: 190px;
 }
 
-/*-------------------------------coin in buy oct page-------------------------------*/
+/*coin in buy oct page*/
 #coin-in-nav img {
     height: 24%;
     width: 24%;
@@ -230,19 +252,22 @@ body > div > div {
     border-radius: 5px;
 }
 
-/*-------------------------------coin out remittance page-------------------------------*/
+/*coin out remittance page*/
 #coin-out-nav img {
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 63px;
     margin: 0px 5px;
 }
 
-/*---------------------------Content End---------------------------------*/
+#coin-out-nav {
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
 
-/*----------------------------Footer Start--------------------------------*/
-#foot {
+/*Footer Start*/
+.footer {
     background: #0f75bc;
-    color: white;
+    width: 100%;
 }
 
 #foot2 {
@@ -251,20 +276,13 @@ body > div > div {
     padding: 15px 0px;
 }
 
-#foot2 h4 {
+#foot2 h4,
+.footer a {
     color: white;
-}
-
-.footer ul li a {
-    color: white;
-}
-
-.footer ul li a:hover {
-    color: yellow;
 }
 
 /*social media logos*/
-#foot > div > div > div:nth-child(3) > ul > li > a > img {
+.footer img {
     width: 20px;
     height: 20px;
 }
@@ -278,8 +296,8 @@ body > div > div {
     color: white;
 }
 
-/*----------------------------Footer End----------------------------------*/
-/*----------------------------Media Queries Start----------------------------------*/
+/*Footer End*/
+/*Media Queries Start*/
 @media (max-width:1199px) {
     #topnav .topbar-main .nav > li > a {
         padding: 0px 2px;
@@ -287,12 +305,12 @@ body > div > div {
 }
 
 @media (max-width:767px) {
-    #main > div > div.col-sm-7 > div > ul {
+    #extras {
         display: none;
     }
 
-    #navbar > ul > li {
-        margin: 0px 20px;
+    .exchangeRate {
+        text-align: none;
     }
 }
 
@@ -302,4 +320,4 @@ body > div > div {
     }
 }
 
-/*----------------------------Media Queries End----------------------------------*/
+/*Media Queries End*/
