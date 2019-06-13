@@ -22,7 +22,7 @@
 @section('content')
     <div class="wrapper" id="loginwrap">
         <div class="container reg-main">
-            <form method="POST" action="{{ route('register') }}">
+	<form method="POST" action="{{ route('register') }}">
                 {{ csrf_field() }}
                 <div class="col-sm-6">
                     <div class="row">

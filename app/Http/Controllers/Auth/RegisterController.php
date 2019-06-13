@@ -32,7 +32,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/auth-verify';
+    // protected $redirectTo = '/auth-verify'; 
+	protected $redirectTo = '/auth-payment';
 
     /**
      * Create a new controller instance.
@@ -80,7 +81,7 @@ class RegisterController extends Controller
             'token' => $this->generateCode()
         ]);
 
-        Mail::to($data['email'])->send(new VerifyMail($user));
+       //  Mail::to($data['email'])->send(new VerifyMail($user));
 
         return $user;
     }
