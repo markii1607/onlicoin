@@ -72,11 +72,11 @@
                         <div class="col-sm-1"></div>
                         <div class="col-sm-10">
                             <div class="text-center" id="coin-out-nav">
-                                <a href="{{ route('auth-cout_remittance') }}"><img src="assets/images/samp.png" alt=""></a>
-                                <a href="{{ route('auth-cout_manage_funds') }}"><img src="assets/images/samp.png" alt=""></a>
-                                <a href="{{ route('auth-cout_payment') }}"><img src="assets/images/samp.png" alt=""></a>
-                                <a href="{{ route('auth-cout_sell_oct') }}"><img src="assets/images/samp.png" alt=""></a>
-                                <a href="{{ route('auth-cout_transfer') }}"><img src="assets/images/samp.png" alt=""></a>
+                                <a href="{{ route('auth-cout_remittance') }}"><img src="assets/images/oct-remittance.png" alt=""></a>
+                                <a href="{{ route('auth-cout_manage_funds') }}"><img src="assets/images/oct-mngfnd.png" alt=""></a>
+                                <a href="{{ route('auth-cout_payment') }}"><img src="assets/images/oct-payment.png" alt=""></a>
+                                <a href="{{ route('auth-cout_sell_oct') }}"><img src="assets/images/oct-sell.png" alt=""></a>
+                                <a href="{{ route('auth-cout_transfer') }}"><img src="assets/images/oct-transfer.png" alt=""></a>
                                 <h3><b>TRANSFER TO ATM</b></h3>
                             </div>
                             <div class="row">
@@ -123,7 +123,7 @@
                             </div>
                             <br />
                             <div class="text-center" id="proc-button">
-                                <button class="btn btn-reverse">Proceed</button>
+                                <button class="btn btn-primary">Proceed</button>
                             </div>
                         </div>
                         <div class="col-sm-1"></div>
