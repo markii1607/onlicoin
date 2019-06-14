@@ -68,7 +68,7 @@
                                 <!--                                    <h1><i>Onlicoin - The Next Generation Online Currency</i></h1>-->
                                 <!--                                    <h1><i>Remittance and Investment Services All in One Place</i></h1>-->
                                 <div class="bsign-up">
-                                    <a href="{{route('auth-register')}}"><button class="btn btn-signup" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1000">SIGN UP</button></a>
+                                    <a href="{{route('auth-register')}}"><button class="btn btn-signup">SIGN UP</button></a>
                                 </div>
                             </div>
                             <div class="col-sm-5">
@@ -90,14 +90,14 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="features-box">
-                    <img data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="800" src="assets/images/gallery/1.jpg" alt="">
+                    <img data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="800" src="assets/images/feat_icons/versatile.png" alt="">
                     <h3 data-aos="fade-right">ONLINE CURRENCY <br> & VERSATILE</h3>
                     <p class="text-muted" data-aos="zoom-in" data-aos-duration="1200">Onlicoin is a unique online currency that can be exchanged into (add number of included fiat money) fiat money and can be converted into any/(number) cryptocurrency.</p>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="features-box">
-                    <img data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="800" src="assets/images/gallery/1.jpg" alt="">
+                    <img data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="800" src="assets/images/feat_icons/convenient.png" alt="">
                     <h3 data-aos="fade-right">CONVENIENT</h3>
                     <p class="text-muted" data-aos="zoom-in" data-aos-duration="1200">Send payments, receive money, and control your investments wherever you go.</p>
                 </div>
@@ -105,7 +105,7 @@
 
             <div class="col-sm-4">
                 <div class="features-box">
-                    <img data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="1000" src="assets/images/gallery/1.jpg" alt="">
+                    <img data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="1000" src="assets/images/feat_icons/transparency.png" alt="">
                     <h3 data-aos="fade-right">TRANSPARENCY</h3>
                     <p class="text-muted" data-aos="zoom-in" data-aos-duration="1200">No shady transactions. Verify other people’s wallets for security, trust, and integrity.</p>
                 </div>
@@ -118,25 +118,25 @@
 
 <section class="section" id="htu">
     <div class="container">
-
         <div class="row">
+        <h1>How It Works</h1>
             <div class="col-sm-4">
                 <div class="features-box">
-                    <img data-aos="zoom-in-up" data-aos-duration="1000" src="assets/images/gallery/1.jpg" alt="">
-                    <p data-aos="zoom-in" data-aos-duration="1000" class="text-muted">Sign Up For Free - It only takes a few minutes.</p>
+                    <img data-aos="zoom-in-up" data-aos-duration="1000" src="assets/images/hiw_icons/signup.png" alt="">
+                    <p data-aos="zoom-in" data-aos-duration="1000" class="text-muted"><strong>Sign Up For Free</strong><br> It only takes a few minutes.</p>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="features-box">
-                    <img data-aos="zoom-in-up" data-aos-duration="1000" src="assets/images/gallery/1.jpg" alt="">
-                    <p data-aos="zoom-in" data-aos-duration="1000" class="text-muted">Watch Our Video on How to Use Onlicoin - Learn all the benefits you can get!</p>
+                    <img data-aos="zoom-in-up" data-aos-duration="1000" src="assets/images/hiw_icons/watch.png" alt="">
+                    <p data-aos="zoom-in" data-aos-duration="1000" class="text-muted"><strong>Watch Our Video on <br> How to Use Onlicoin</strong><br>Learn all the benefits you can get!</p>
                 </div>
             </div>
 
             <div class="col-sm-4">
                 <div class="features-box">
-                    <img data-aos="zoom-in-up" data-aos-duration="1000" src="assets/images/gallery/1.jpg" alt="">
-                    <p data-aos="zoom-in" data-aos-duration="1000" class="text-muted">Start Any of Your Financial Transactions - Onlicoin Got You Covered!</p>
+                    <img data-aos="zoom-in-up" data-aos-duration="1000" src="assets/images/hiw_icons/transact.png" alt="">
+                    <p data-aos="zoom-in" data-aos-duration="1000" class="text-muted"><strong>Start Any of Your <br> Financial Transactions</strong><br>Onlicoin Got You Covered!</p>
                 </div>
             </div>
         </div> <!-- end row -->
@@ -213,18 +213,17 @@
 <section class="section" id="cta">
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
-                <img data-aos="fade-right" data-aos-duration="1000" class="pull-right" src="assets/images/gallery/1.jpg" alt="">
+            <div class="col-sm-6">
+                <img data-aos="fade-right" data-aos-duration="1000" class="pull-right" src="assets/images/hiw_icons/bottom.png" alt="">
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-6">
                 <div id="cta-content">
-                    <h4 data-aos="fade-left" data-aos-duration="1000">With the use of blockchain technology, every transaction is more secure. Experience the Difference. Get Started Now. (Sign Up for Free!)</h4>
+                    <h1>Experience The <br> Difference</h1>
+                    <h4 data-aos="fade-left" data-aos-duration="1000">With the use of blockchain technology, <br> every transaction is more secure. <br> <em><b>(Sign Up for Free!)</b></em> </h4>
+                    <a href="{{ route('auth-register') }}"><button data-aos="zoom-in-up" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
                 </div>
             </div>
         </div> <!-- end row -->
-        <div class="text-center">
-            <a href="{{ route('auth-register') }}"><button data-aos="zoom-in-up" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
-        </div>
     </div> <!-- end container -->
 </section>
 <!--   End call to action  -->
@@ -271,9 +270,9 @@
                 <br>
                 <h6 class="text-center copyright">Copyright 2019 Onlicoin, All rights reserved. <b><a href="#">Privacy Policy</a> <a href="">Terms of Service</a></b></h6>
                 <div class="social text-center">
-                    <a href="https://www.facebook.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/fb-icon-oct.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/twitter-icon-oct.png" alt="Twitter"></a>
-                    <a href="https://www.linkedin.com/company/onlicoin/"><img style="width:30px; height:30px" src="assets/images/linkedin-icon-oct.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/social_icons/fb-icon-oct.png" alt="Facebook"></a>
+                    <a href="https://twitter.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/social_icons/twitter-icon-oct.png" alt="Twitter"></a>
+                    <a href="https://www.linkedin.com/company/onlicoin/"><img style="width:30px; height:30px" src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
                 </div>
             </div>
             <div class="col-sm-2"></div>

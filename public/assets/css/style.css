@@ -1003,12 +1003,21 @@ textarea.form-control {
 }
 
 #htu img {
-    height: 360px;
-    width: 360px;
+    height: 280px;
+    width: 280px;
 }
 
 #htu {
     background-color: #383c42;
+}
+
+#htu p {
+    font-size: 18px;
+}
+
+#htu h1{
+    color: white;
+    margin-left: 5%;
 }
 
 #foot2 {
@@ -1027,13 +1036,20 @@ textarea.form-control {
 }
 
 #cta img {
-    width: 220px;
-    height: 220px;
+    width: 320px;
+    height: 320px;
 }
 
-#cta-content {
-    padding: 56px 0px;
-}
+ #cta-content h1{
+    margin-bottom: 50px;
+    margin-top: 12px;
+    text-transform: uppercase;
+ }
+
+ /* #cta-content h4{
+   margin-bottom: 55px;
+} */
+
 
 .bsign-up {
     margin-top: 7%;
@@ -1046,7 +1062,7 @@ textarea.form-control {
 
 #bottom-signup {
     font-size: 24px;
-    width: 20%;
+    text-align: center;
 }
 
 #values {
