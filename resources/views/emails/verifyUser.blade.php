@@ -68,7 +68,7 @@
     <body>
         <header class="_mail-OChead">
             <div class="_mail-OClogo">
-                <img src="https://i.imgur.com/jgUGvO6.png" alt="Onlicoin Logo" />
+                <img src="http://onlicoin.com/assets/images/OC_logwhite.png" alt="Onlicoin Logo" />
             </div>
         </header>
         <main class="main">
