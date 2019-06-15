@@ -1036,13 +1036,13 @@ textarea.form-control {
 }
 
 #cta img {
-    width: 320px;
-    height: 320px;
+    width: 430px;
+    height: 430px;
 }
 
  #cta-content h1{
     margin-bottom: 50px;
-    margin-top: 12px;
+    margin-top: 70px;
     text-transform: uppercase;
  }
 
@@ -1088,4 +1088,8 @@ textarea.form-control {
 
 #story h2 {
     margin-bottom: 5%;
+}
+
+p.adjust{
+    margin-top:45px;
 }

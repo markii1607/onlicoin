@@ -4,7 +4,7 @@
         <div class="topbar-main">
             <div id="main" class="container">
                 <div class="col-sm-3" id="logo">
-                    <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
+                    <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo"></a>
                 </div>
                 <div class="col-sm3">
                     <ul id="reg-nav-links" class="pull-right about">
@@ -30,7 +30,7 @@
                             <h1><i>Welcome to Onlicoin – your gateway towards flexible investments.</i></h1>
                         </div>
                     </div>
-                    <div class="row testimonials about">
+                    <div class="row testimonials text-center">
                         <div class="col-sm-4">
                             <img src="assets/images/qmark.png" class="inline" alt="">
                             <h4>PAY ONLINE</h4>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="col-sm-4">
                             <img src="assets/images/qmark.png" class="inline" alt="">
-                            <h4>INVEST THROUGH OUR SUBSCRIPTION PLANS</h4>
+                            <h4>INVEST THROUGH OUR MANAGE FUNDS.</h4>
                         </div>
                     </div>
                     <div class="row">
@@ -138,54 +138,51 @@
 @stop 
 
 @section('footer')
-        <footer id="foot2" class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-8">
-                        <div class="col-sm-3">
-                            <h4 class="head-links">
-                                COMPANY
-                            </h4>
-                            <p>About Us</p>
-                            <p>Contact Us</p>
-                        </div>
-                        <div class="col-sm-3">
-                            <h4 class="head-links">
-                                LEARN MORE
-                            </h4>
-                            <p>Fees</p>
-                            <p>FAQ</p>
-                            <p>Become a partner</p>
-                        </div>
-                        <div class="col-sm-3">
-                            <h4 class="head-links">
-                                BLOGS
-                            </h4>
-                            <p>Articles</p>
-                            <p>Newsletter</p>
-                        </div>
-                        <div class="col-sm-3">
-                            <h4 class="head-links">
-                                OUR TECHNOLOGY
-                            </h4>
-                            <p>How it works</p>
-                            <p>Safety</p>
-                        </div>
-                        <div class="clearfix"></div>
-                        <h6 class="about copyright">Copyright 2019 Onlicoin, All rights reserved. <b><a href="#">Privacy Policy</a> <a href="">Terms of Service</a></b></h6>
-                        <div class="social text-center">
-                            <a href="https://www.facebook.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/fb-icon-oct.png" alt="Facebook"></a>
-                            <a href="https://twitter.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/twitter-icon-oct.png" alt="Twitter"></a>
-                            <a href="https://www.linkedin.com/company/onlicoin/"><img style="width:30px; height:30px" src="assets/images/linkedin-icon-oct.png" alt="LinkedIn"></a>
-                        </div>
+<footer id="foot" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
 
-                    </div>
-                    <div class="col-sm-2"></div>
-                    <div class="clearfix"></div>
-                </div>
-
+                <ul class="pull-left list-inline inline-block m-b-0">
+                    <li>
+                        <a href="#">© Onlicoin 2019</a>
+                    </li>
+                </ul>
             </div>
-        </footer>
+            <div class="col-sm-6 about">
+                <ul class="list-inline inline-block m-b-0">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="#">AML Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <ul class="pull-right list-inline inline-block m-b-0">
+                    <li>
+                        <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/social_icons/fb-icon-oct.png" alt="Facebook"></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/onlicointoken"><img src="assets/images/social_icons/twitter-icon-oct.png" alt="Twitter"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/onlicoin"><img src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
     </div>
 @stop

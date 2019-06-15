@@ -16,7 +16,7 @@
             </button>
 
             <!-- LOGO -->
-            <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
+            <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo"></a>
 
         </div>
         <!-- end navbar-header -->
@@ -99,7 +99,7 @@
                 <div class="features-box">
                     <img data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="800" src="assets/images/feat_icons/convenient.png" alt="">
                     <h3 data-aos="fade-right">CONVENIENT</h3>
-                    <p class="text-muted" data-aos="zoom-in" data-aos-duration="1200">Send payments, receive money, and control your investments wherever you go.</p>
+                    <p class="text-muted adjust" data-aos="zoom-in" data-aos-duration="1200">Send payments, receive money, and control your investments wherever you go.</p>
                 </div>
             </div>
 
@@ -107,7 +107,7 @@
                 <div class="features-box">
                     <img data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="1000" src="assets/images/feat_icons/transparency.png" alt="">
                     <h3 data-aos="fade-right">TRANSPARENCY</h3>
-                    <p class="text-muted" data-aos="zoom-in" data-aos-duration="1200">No shady transactions. Verify other people’s wallets for security, trust, and integrity.</p>
+                    <p class="text-muted adjust" data-aos="zoom-in" data-aos-duration="1200">No shady transactions. Verify other people’s wallets for security, trust, and integrity.</p>
                 </div>
             </div>
 

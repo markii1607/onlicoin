@@ -229,7 +229,7 @@ body > div > div {
 }
 
 .reg-main {
-    margin-bottom: 190px;
+    margin-bottom: 30px;
 }
 
 /*coin in buy oct page*/
@@ -264,6 +264,9 @@ body > div > div {
     padding-bottom: 3%;
 }
 
+.about{
+    text-align: center;
+}
 /*Footer Start*/
 .footer {
     background: #0f75bc;
