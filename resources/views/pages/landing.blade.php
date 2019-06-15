@@ -16,7 +16,7 @@
             </button>
 
             <!-- LOGO -->
-            <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
+            <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo"></a>
 
         </div>
         <!-- end navbar-header -->
@@ -98,7 +98,7 @@
                 <div class="features-box">
                     <img data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="800" src="assets/images/feat_icons/convenient.png" alt="">
                     <h3 data-aos="fade-right">CONVENIENT</h3>
-                    <p class="text-muted" data-aos="zoom-in" data-aos-duration="1200">Send payments, receive money, and control your investments wherever you go.</p>
+                    <p class="text-muted adjust" data-aos="zoom-in" data-aos-duration="1200">Send payments, receive money, and control your investments wherever you go.</p>
                 </div>
             </div>
 
@@ -106,7 +106,7 @@
                 <div class="features-box">
                     <img data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="1000" src="assets/images/feat_icons/transparency.png" alt="">
                     <h3 data-aos="fade-right">TRANSPARENCY</h3>
-                    <p class="text-muted" data-aos="zoom-in" data-aos-duration="1200">No shady transactions. Verify other people’s wallets for security, trust, and integrity.</p>
+                    <p class="text-muted adjust" data-aos="zoom-in" data-aos-duration="1200">No shady transactions. Verify other people’s wallets for security, trust, and integrity.</p>
                 </div>
             </div>
 
@@ -217,9 +217,9 @@
             </div>
             <div class="col-sm-6">
                 <div id="cta-content">
-                    <h1>Experience The <br> Difference</h1>
+                    <h1 data-aos="fade-left" data-aos-duration="1000">Experience The <br> Difference</h1>
                     <h4 data-aos="fade-left" data-aos-duration="1000">With the use of blockchain technology, <br> every transaction is more secure. <br> <em><b>(Sign Up for Free!)</b></em> </h4>
-                    <a href="{{ route('register') }}"><button data-aos="zoom-in-up" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
+                    <a href="{{ route('register') }}"><button data-aos="fade-left" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
                 </div>
             </div>
         </div> <!-- end row -->

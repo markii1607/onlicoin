@@ -7,7 +7,7 @@
     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
     <meta name="author" content="Coderthemes">
 
-    <link rel="shortcut icon" href="assets/images/OC_logwhite.png">
+    <link rel="shortcut icon" href="assets/images/Onlicoin%20Final%20Logo.png">
 
     <title>Onlicoin</title>
 

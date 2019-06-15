@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="assets/images/favicon_1.ico">
+    <link rel="shortcut icon" href="assets/images/Onlicoin%20Final%20Logo.png">
     <title>Onlicoin</title>
 
     <link rel="stylesheet" href="assets/plugins/morris/morris.css">

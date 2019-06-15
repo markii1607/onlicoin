@@ -2,61 +2,50 @@
 @section('header')
 <header id="topnav">
     <div class="topbar-main">
-        <div id="main" class="container">
-            <div class="col-sm-3" id="logo">
-                <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
+        <div class="row">
+            <div class="col-sm-2">
+            <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo"></a>
             </div>
-            <div class="col-sm-6 exchangeRate" id="exchangeRates">
-                <ul>
-                    <li>
-                        <h4>USD</h4>
-                        <h5>$0.80</h5>
-                    </li>
-                    <li>
-                        <h4>BTC</h4>
-                        <h5>$4,001.81</h5>
-                    </li>
-                    <li>
-                        <h4>ETH</h4>
-                        <h5>$137.48</h5>
-                    </li>
-                    <li>
-                        <h4>OCT</h4>
-                        <h5>$0.80</h5>
-                    </li>
-                    <li>
-                        <h4>EUR</h4>
-                        <h5>$0.60</h5>
-                    </li>
-                </ul>
+            <div class="col-sm-8">
+                <div class="exchangRates text-center">
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2">USD</div>
+                        <div class="col-sm-2">BTC</div>
+                        <div class="col-sm-2">ETH</div>
+                        <div class="col-sm-2">OCT</div>
+                        <div class="col-sm-2">EUR</div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2">$0.80</div>
+                        <div class="col-sm-2">$4,001.81</div>
+                        <div class="col-sm-2">$137.48</div>
+                        <div class="col-sm-2">$0.80</div>
+                        <div class="col-sm-2">$0.60</div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-3" id="">
-                <ul class="nav-links pull-right">
-                    <li>
-                        <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle">
-                    </li>
-                    <li>
-                        <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle">
-                        <p class="inline-block">Michael Alcala</p>
-                    </li>
-                </ul>
+            <div class="col-sm-2">
+                <div class="extras">
+                    <div class="row">
+                            <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle img-responsive inline">
+                            <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle img-responsive inline">
+                            <p class="inline">Michael Alcala</p> 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="navbar-custom">
-        <div class="container">
-            <div id="navbar">
-                <ul>
-                    <li><a href="{{ route('auth-index') }}"><img src="assets/images/my-wallet.png" alt="My Wallet"></a></li>
-                    <li><a href="#"><img src="assets/images/earnings.png" alt="Earnings"></a></li>
-                    <li><a href="#"><img src="assets/images/merchants-partner.png" alt="Merchant Partners"></a></li>
-                    <li><a href="#"><img src="assets/images/buy-sell.png" alt="Buy / Sell"></a></li>
-                    <li><a href="#"><img src="assets/images/subscribers.png" alt="Subscribers"></a></li>
-                </ul>
-            </div>
-        </div> <!-- end container -->
-    </div> <!-- end navbar-custom -->
+    <div class="container-fluid navbar text-center">
+        <a class="inline" href="{{ route('auth-index') }}"><img src="assets/images/my-wallet.png" alt="My Wallet"></a>
+        <a class="inline" href="#"><img src="assets/images/earnings.png" alt="Earnings"></a>
+        <a class="inline" href="#"><img src="assets/images/merchants-partner.png" alt="Merchant Partners"></a>
+        <a class="inline" href="#"><img src="assets/images/buy-sell.png" alt="Buy / Sell"></a>
+        <a class="inline" href="#"><img src="assets/images/subscribers.png" alt="Subscribers"></a>
+    </div>
 </header>
 @stop
 
@@ -163,15 +152,15 @@
                 </ul>
             </div>
             <div class="col-sm-3">
-                <ul class="pull-right list-inline inline-block m-b-0">
+            <ul class="pull-right list-inline inline-block m-b-0">
                     <li>
-                        <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/fb-icon-oct.png" alt="Facebook"></a>
+                        <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/social_icons/fb-icon-oct.png" alt="Facebook"></a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/onlicointoken"><img src="assets/images/twitter-icon-oct.png" alt="Twitter"></a>
+                        <a href="https://twitter.com/onlicointoken"><img src="assets/images/social_icons/twitter-icon-oct.png" alt="Twitter"></a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/company/onlicoin"><img src="assets/images/linkedin-icon-oct.png" alt="LinkedIn"></a>
+                        <a href="https://www.linkedin.com/company/onlicoin"><img src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
                     </li>
                 </ul>
             </div>

@@ -16,7 +16,7 @@
             </button>
 
             <!-- LOGO -->
-            <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
+            <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo"></a>
 
         </div>
         <!-- end navbar-header -->
@@ -156,7 +156,7 @@
     <div class="container">
         <div class="row">
             <h2 data-aos="zoom-in-up" data-aos-duration="1000" class="text-center"><b>Company Story</b></h2>
-            <h4 data-aos="zoom-in-up" data-aos-duration="1000" class="text-center">Onlicoin is a financial company that started in 2019 with the vision of a better online platform for remittance and investment. Through the use of blockchain technology, we are creating a safer place for digital transactions both for business and personal use. Licensed by the Bangko Sentral ng Pilipinas and trusted by more than (number) partners nationwide, Onlicoin meets the needs of more than (number) Filipinos worldwide.</h4>
+            <h4 data-aos="zoom-in-up" data-aos-duration="1000" class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nisi nam adipisci dolor praesentium repellendus suscipit, tempore esse. Temporibus optio veritatis voluptatum facilis quasi pariatur ipsam quos veniam incidunt praesentium.</h4>
         </div> <!-- end row -->
     </div> <!-- end container -->
 </section>
@@ -214,13 +214,14 @@
                     <p>Safety</p>
                 </div>
                 <div class="clearfix"></div>
+                <br>
+                <br>
                 <h6 class="text-center copyright">Copyright 2019 Onlicoin, All rights reserved. <b><a href="#">Privacy Policy</a> <a href="">Terms of Service</a></b></h6>
                 <div class="social text-center">
-                    <a href="https://www.facebook.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/fb-icon-oct.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/twitter-icon-oct.png" alt="Twitter"></a>
-                    <a href="https://www.linkedin.com/company/onlicoin/"><img style="width:30px; height:30px" src="assets/images/linkedin-icon-oct.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/social_icons/fb-icon-oct.png" alt="Facebook"></a>
+                    <a href="https://twitter.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/social_icons/twitter-icon-oct.png" alt="Twitter"></a>
+                    <a href="https://www.linkedin.com/company/onlicoin/"><img style="width:30px; height:30px" src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
                 </div>
-
             </div>
             <div class="col-sm-2"></div>
             <div class="clearfix"></div>
