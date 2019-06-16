@@ -1,13 +1,14 @@
 @extends('master')
 @section('header')
-<header id="topnav">
-    <div class="topbar-main">
+<header>
+    <div class="container-fluid topnav">
         <div class="row">
             <div class="col-sm-2">
-                <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
+                <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png"
+                        alt="onlicoin logo"></a>
             </div>
             <div class="col-sm-8">
-                <div class="exchangRates text-center">
+            <div class="exchangRates text-center">
                     <div class="row">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-2">USD</div>
@@ -29,7 +30,7 @@
                 </div>
             </div>
             <div class="col-sm-2">
-                <div class="extras">
+            <div class="extras">
                     <div class="row">
                             <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle img-responsive inline">
                             <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle img-responsive inline">
@@ -286,81 +287,33 @@
 </div>
 @stop
 <!--        footer-->
-<footer id="foot" class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
+<footer class="footer">
+    <div class="row">
+        <div class="col-sm-3 text-center">
+            <a href="#">© Onlicoin 2019</a>
+        </div>
+        <div class="col-sm-6 text-center">
 
-                <ul class="pull-left list-inline inline-block m-b-0">
-                    <li>
-                        <a href="#">© Onlicoin 2019</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-6 about">
-                <ul class="list-inline inline-block m-b-0">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Terms</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy</a>
-                    </li>
-                    <li>
-                        <a href="#">AML Policy</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-3">
-                <ul class="pull-right list-inline inline-block m-b-0">
-                    <li>
-                        <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/social_icons/fb-icon-oct.png" alt="Facebook"></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/onlicointoken"><img src="assets/images/social_icons/twitter-icon-oct.png" alt="Twitter"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/company/onlicoin"><img src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
-                    </li>
-                </ul>
-            </div>
+            <a href="#">About</a>
+
+            <a href="#">Blog</a>
+
+            <a href="#">Terms</a>
+
+            <a href="#">Privacy</a>
+
+            <a href="#">AML Policy</a>
+        </div>
+        <div class="col-sm-3 text-center">
+            <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/social_icons/fb-icon-oct.png"
+                    alt="Facebook"></a>
+            <a href="https://twitter.com/onlicointoken"><img src="assets/images/social_icons/twitter-icon-oct.png"
+                    alt="Twitter"></a>
+            <a href="https://www.linkedin.com/company/onlicoin"><img
+                    src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
         </div>
     </div>
 </footer>
-<!--
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <a href="#">© Onlicoin 2019</a>
-            </div>
-            <div class="col-sm-6">
-                <a href="#">About</a>
-
-                <a href="#">Blog</a>
-
-                <a href="#">Terms</a>
-
-                <a href="#">Privacy</a>
-
-                <a href="#">AML Policy</a>
-            </div>
-            <div class="col-sm-3">
-
-                <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/Social_Icons/fb-icon-oct.png" alt="Facebook"></a>
-                <a href="https://twitter.com/onlicointoken"><img src="assets/images/Social_Icons/twitter-icon-oct.png" alt="Twitter"></a>
-                <a href="https://www.linkedin.com/company/onlicoin"><img src="assets/images/Social_Icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
-
-            </div>
-        </div>
-    </div>
-</div>
--->
 </div>
 </div>
 

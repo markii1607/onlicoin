@@ -53,7 +53,7 @@ body {
     color: white;
 }
 
-#topnav .topbar-main {
+.topnav {
     background-color: #0f75bc;
 }
 
@@ -104,25 +104,6 @@ body {
     color: white;
 }
 
-/*Navbar Start*/
-/*
-#navbar > ul > li > a > img {
-    height: 80px;
-    width: 80px;
-    margin: 10px 0px;
-}
-
-#navbar > ul {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-#navbar > ul > li {
-    margin: 0% 2%;
-    display: inline;
-}
-*/
 .navbar img {
     height: 70px;
     width: 70px;
@@ -159,14 +140,10 @@ body {
     margin-top: 12px;
 }
 
-/*Content Start*/
-body > div > div {
-    margin-top: 45px;
-}
-
 .card-box {
     border: 1px solid black;
     position: relative;
+    width: 100%;
 }
 
 .panel-name {
@@ -179,22 +156,30 @@ body > div > div {
     color: white;
     text-transform: uppercase;
 }
-
+/* 
 #index-wrap {
     width: 800px;
-    margin: auto;
-    padding-top: 35px;
-}
+} */
 
 /*login page*/
-#loginwrap {
+/* #loginwrap {
     padding-top: 75px
+} */
+
+.cb-login {
+    width: 350px;
+    margin: 50px auto;
+    height: 440px;
 }
 
-#cb-login {
-    width: 350px;
-    margin: auto;
-    height: 440px;
+.cb-login .checkbox{
+    margin: 0px;
+}
+.cb-login button{
+    margin-top: 30px;
+}
+.cb-login p{
+    margin-top: 45px;
 }
 
 /*payment page*/
@@ -229,6 +214,7 @@ body > div > div {
 }
 
 .reg-main {
+    margin-top: 50px;
     margin-bottom: 30px;
 }
 
@@ -237,6 +223,7 @@ body > div > div {
     height: 24%;
     width: 24%;
     margin: 0;
+    padding: 0px 8px;
 }
 
 .inp-fields input {
@@ -248,8 +235,31 @@ body > div > div {
 }
 
 #proc-button button {
+    margin-top: 20px;
     width: 45%;
     border-radius: 5px;
+}
+
+.rem-coinin {
+    width: 480px;
+    margin: 50px auto;
+    height: 440px;
+}
+
+.rem-coinin h3{
+    margin-bottom: 35px;
+}
+
+.mf-coinin {
+    width: 480px;
+    margin: 50px auto;
+    height: 540px;
+}
+
+.pay-coinin {
+    width: 480px;
+    margin: 50px auto;
+    height: 500px;
 }
 
 /*coin out remittance page*/
@@ -271,6 +281,9 @@ body > div > div {
 .footer {
     background: #0f75bc;
     width: 100%;
+}
+.footer a{
+    padding: 0px 8px;
 }
 
 #foot2 {
@@ -301,26 +314,4 @@ body > div > div {
 
 /*Footer End*/
 /*Media Queries Start*/
-@media (max-width:1199px) {
-    #topnav .topbar-main .nav > li > a {
-        padding: 0px 2px;
-    }
-}
-
-@media (max-width:767px) {
-    #extras {
-        display: none;
-    }
-
-    .exchangeRate {
-        text-align: none;
-    }
-}
-
-@media (max-width:991px) {
-    .wrapper {
-        padding-top: 166px;
-    }
-}
-
 /*Media Queries End*/

@@ -218,9 +218,9 @@
             </div>
             <div class="col-sm-6">
                 <div id="cta-content">
-                    <h1>Experience The <br> Difference</h1>
+                    <h1 data-aos="fade-left" data-aos-duration="1000">Experience The <br> Difference</h1>
                     <h4 data-aos="fade-left" data-aos-duration="1000">With the use of blockchain technology, <br> every transaction is more secure. <br> <em><b>(Sign Up for Free!)</b></em> </h4>
-                    <a href="{{ route('auth-register') }}"><button data-aos="zoom-in-up" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
+                    <a href="{{ route('auth-register') }}"><button data-aos="fade-left" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
                 </div>
             </div>
         </div> <!-- end row -->
