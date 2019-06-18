@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
+use App\User;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 
 class PagesController extends Controller
@@ -12,20 +13,12 @@ class PagesController extends Controller
     	return view('admin.index');
     }
 
-    public function login () {
-    	return view('pages.login');
-    }
-
     public function verify () {
     	return view('pages.verify');
     }
 
     public function payment () {
     	return view('pages.payment');
-    }
-
-    public function register () {
-    	return view('pages.register');
     }
 
     public function landing () {
@@ -70,5 +63,33 @@ class PagesController extends Controller
 
     public function cout_transfer () {
     	return view('admin.cout_transfer');
+    }
+
+    public function userVerify(Request $request) {
+        $code = auth()->user()->token;
+        $verified = auth()->user()->verified;
+
+        if (!$verified) {
+            $validate = Validator::make($request->all(), [
+                'code' => 'required|alpha_num|size:6|'
+            ])->validate();
+
+            if ($code == $request->code) {
+                $user = User::find(auth()->user()->id);
+                $user->verified = 1;
+                if ($user->update()) {
+                    return redirect('auth-payment')
+                        ->with('toast_success', 'Verified Successfully.');
+                } else {
+                    return back()->with('toast_error','Something went wrong.');
+                }
+            } else {
+                return back()
+                    ->withErrors(['code' => 'The verification code cannot be found. Please try again.'])
+                    ->withInput();
+            }
+        } else {
+            return redirect('/auth-index')->with('warning', 'Your email is already verified.');
+        }
     }
 }

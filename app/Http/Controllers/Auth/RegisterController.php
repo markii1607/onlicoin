@@ -3,9 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\VerifyUser;
+use Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\VerifyMail;
 use Illuminate\Foundation\Auth\RegistersUsers;
+// use RealRashid\SweetAlert\Facades\Alert;
 
 class RegisterController extends Controller
 {
@@ -27,7 +32,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+     protected $redirectTo = '/auth-verify'; 
+//	protected $redirectTo = '/auth-payment';
 
     /**
      * Create a new controller instance.
@@ -48,9 +54,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'contactNo' => 'required|string|min:11'
         ]);
     }
 
@@ -62,10 +70,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+        $user = User::create([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'contactNo' => $data['contactNo'],
+            'user_referralCode' => $data['user_referralCode'],
+            'user_Datejoined' => date('Y-m-d H:i:s'),
+            'token' => $this->generateCode()
         ]);
+
+        Mail::to($data['email'])->send(new VerifyMail($user));
+
+        return $user;
     }
 }

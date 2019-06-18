@@ -21,8 +21,9 @@
 </head>
 
 <body>
-    {{--@include('sweetalert::alert')--}}
     <div class="wrapper">
+    @include('sweetalert::alert')
+
     @yield('header')
 
     @yield('content')

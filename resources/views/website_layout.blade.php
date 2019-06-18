@@ -32,6 +32,11 @@
 
 
 <body data-spy="scroll" data-target="#navbar-menu">
+<<<<<<< HEAD
+=======
+
+    @include('sweetalert::alert')
+>>>>>>> f3dcfdb524142615221132a693a71c5f4c427390
     
     @yield('header')
 
