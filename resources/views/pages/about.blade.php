@@ -24,24 +24,24 @@
         <!-- menu -->
         <div class="navbar-collapse collapse" id="navbar-menu">
 
-            <!-- Navbar right -->
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active">
-                    <a href="#features" class="nav-link">FEATURES</a>
-                </li>
-                <li>
-                    <a href="#whitepaper" class="nav-link">WHITEPAPER</a>
-                </li>
-                <li>
-                    <a href="#pricing" class="nav-link">ABOUT US</a>
-                </li>
-                <li>
-                    <a href="{{route('auth-login')}}" class="nav-link">LOGIN</a>
-                </li>
-                <li>
-                    <a href="{{route('auth-register')}}" class="btn btn-white-bordered navbar-btn">SIGN UP</a>
-                </li>
-            </ul>
+                <!-- Navbar right -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="#features" class="nav-link">FEATURES</a>
+                    </li>
+                    <li>
+                        <a href="#whitepaper" class="nav-link">WHITEPAPER</a>
+                    </li>
+                    <li>
+                        <a href="#pricing" class="nav-link">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="{{route('login')}}" class="nav-link">LOGIN</a>
+                    </li>
+                    <li>
+                        <a href="{{route('register')}}" class="btn btn-white-bordered navbar-btn">SIGN UP</a>
+                    </li>
+                </ul>
 
         </div>
         <!--/Menu -->
@@ -170,7 +170,7 @@
             </div>
         </div> <!-- end row -->
         <div class="text-center" data-aos="zoom-in-up">
-            <a href="{{ route('auth-register') }}"><button id="bottom-signup" class="btn btn-black-bordered navbar-btn"> SIGN UP</button></a>
+            <a href="{{ route('register') }}"><button id="bottom-signup" class="btn btn-black-bordered navbar-btn"> SIGN UP</button></a>
         </div>
     </div> <!-- end container -->
 </section>

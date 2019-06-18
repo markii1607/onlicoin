@@ -27,12 +27,12 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/aos.css" rel="stylesheet">
-
+    @yield('styles')
 </head>
 
 
 <body data-spy="scroll" data-target="#navbar-menu">
-
+    
     @yield('header')
 
     @yield('content')

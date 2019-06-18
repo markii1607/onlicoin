@@ -36,10 +36,10 @@
                     <a href="{{route('auth-about')}}" class="nav-link">ABOUT US</a>
                 </li>
                 <li>
-                    <a href="{{route('auth-login')}}" class="nav-link">LOGIN</a>
+                    <a href="{{route('login')}}" class="nav-link">LOGIN</a>
                 </li>
                 <li>
-                    <a href="{{route('auth-register')}}" class="btn btn-white-bordered navbar-btn">SIGN UP</a>
+                    <a href="{{route('register')}}" class="btn btn-white-bordered navbar-btn">SIGN UP</a>
                 </li>
             </ul>
 
@@ -68,11 +68,10 @@
                                 <!--                                    <h1><i>Onlicoin - The Next Generation Online Currency</i></h1>-->
                                 <!--                                    <h1><i>Remittance and Investment Services All in One Place</i></h1>-->
                                 <div class="bsign-up">
-                                    <a href="{{route('auth-register')}}"><button class="btn btn-signup">SIGN UP</button></a>
+                                    <a href="{{route('register')}}"><button class="btn btn-signup">SIGN UP</button></a>
                                 </div>
                             </div>
-                            <div class="col-sm-5">
-                            </div>
+                            <div class="col-sm-5"></div>
                         </div>
                     </div>
                 </div>
@@ -220,7 +219,7 @@
                 <div id="cta-content">
                     <h1 data-aos="fade-left" data-aos-duration="1000">Experience The <br> Difference</h1>
                     <h4 data-aos="fade-left" data-aos-duration="1000">With the use of blockchain technology, <br> every transaction is more secure. <br> <em><b>(Sign Up for Free!)</b></em> </h4>
-                    <a href="{{ route('auth-register') }}"><button data-aos="fade-left" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
+                    <a href="{{ route('register') }}"><button data-aos="fade-left" data-aos-duration="1000" id="bottom-signup" class="btn btn-white-bordered navbar-btn"> SIGN UP</button></a>
                 </div>
             </div>
         </div> <!-- end row -->
@@ -231,55 +230,17 @@
 
 @section('footer')
 <!-- FOOTER -->
-<footer id="foot2" class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        COMPANY
-                    </h4>
-                    <p>About Us</p>
-                    <p>Contact Us</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        LEARN MORE
-                    </h4>
-                    <p>Fees</p>
-                    <p>FAQ</p>
-                    <p>Become a partner</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        BLOGS
-                    </h4>
-                    <p>Articles</p>
-                    <p>Newsletter</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        OUR TECHNOLOGY
-                    </h4>
-                    <p>How it works</p>
-                    <p>Safety</p>
-                </div>
-                <div class="clearfix"></div>
-                <br>
-                <br>
-                <h6 class="text-center copyright">Copyright 2019 Onlicoin, All rights reserved. <b><a href="#">Privacy Policy</a> <a href="">Terms of Service</a></b></h6>
-                <div class="social text-center">
-                    <a href="https://www.facebook.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/social_icons/fb-icon-oct.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/social_icons/twitter-icon-oct.png" alt="Twitter"></a>
-                    <a href="https://www.linkedin.com/company/onlicoin/"><img style="width:30px; height:30px" src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
-                </div>
-            </div>
-            <div class="col-sm-2"></div>
-            <div class="clearfix"></div>
-        </div>
-
-    </div>
-</footer>
+@include('pages.footer-outside')
 <!-- End Footer -->
+
+@stop
+@section('styles')
+    <style>
+        .footer h4 {
+            font-size: 1.1em;
+        }
+        .footer p {
+            font-size: 0.8em;
+        }
+    </style>
 @stop
