@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->datetime('user_Datejoined');
             $table->boolean('verified')->default(false);
             $table->string('token');
+            $table->string('referral_code')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

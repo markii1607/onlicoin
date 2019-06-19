@@ -17,18 +17,19 @@
     <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/onlicoinStyle.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="assets/js/modernizr.min.js"></script>
+    @yield('styles')
 </head>
 
 <body>
-
     @include('sweetalert::alert')
-
+    <div class="wrapper">
     @yield('header')
 
     @yield('content')
 
     @yield('footer')
+    </div>
+
 
     <!--    scripts-->
     <script src="assets/js/jquery.min.js"></script>
@@ -43,21 +44,23 @@
     <script src="assets/js/jquery.nicescroll.js"></script>
     <script src="assets/js/jquery.scrollTo.min.js"></script>
 
-    <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+    {{--<script src="assets/plugins/peity/jquery.peity.min.js"></script>--}}
 
     <!-- jQuery  -->
-    <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
-    <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
+    {{--<script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>--}}
+    {{--<script src="assets/plugins/counterup/jquery.counterup.min.js"></script>--}}
 
-    <script src="assets/plugins/morris/morris.min.js"></script>
-    <script src="assets/plugins/raphael/raphael-min.js"></script>
+    {{--<script src="assets/plugins/morris/morris.min.js"></script>--}}
+    {{--<script src="assets/plugins/raphael/raphael-min.js"></script>--}}
 
-    <script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
+    {{--<script src="assets/plugins/jquery-knob/jquery.knob.js"></script>--}}
 
     <script src="assets/pages/jquery.dashboard.js"></script>
 
-    <script src="assets/js/jquery.core.js"></script>
-    <script src="assets/js/jquery.app.js"></script>
+    {{--<script src="assets/js/jquery.core.js"></script>--}}
+    {{--<script src="assets/js/jquery.app.js"></script>--}}
+   {{--<script src="assets/js/modernizr.min.js"></script>--}}
+
 </body>
 
 </html>
