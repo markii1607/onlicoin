@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aeb5244b3e026cc0598a3d544d2a4347",
+    "content-hash": "5abdd94ea1b73eb088c80ee2b2742a3e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -972,6 +972,85 @@
                 "storage"
             ],
             "time": "2019-05-20T20:21:14+00:00"
+        },
+        {
+            "name": "mastercard/crossborder",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mastercard/mastercard-crossborder-php.git",
+                "reference": "ebab91380dd058d0dd69ee0d9a6376b311c4187c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mastercard/mastercard-crossborder-php/zipball/ebab91380dd058d0dd69ee0d9a6376b311c4187c",
+                "reference": "ebab91380dd058d0dd69ee0d9a6376b311c4187c",
+                "shasum": ""
+            },
+            "require": {
+                "mastercard/mastercard-api-core": ">=1.4.0 <1.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "MasterCard": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "MasterCard Worldwide",
+                    "email": "ApiSupport@mastercard.com"
+                }
+            ],
+            "description": "This is the api for crossborder",
+            "time": "2017-04-27T09:16:10+00:00"
+        },
+        {
+            "name": "mastercard/mastercard-api-core",
+            "version": "1.4.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mastercard/sdk-core-php.git",
+                "reference": "6640ef3e096efc375c7a9a52645476ebc8002a41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mastercard/sdk-core-php/zipball/6640ef3e096efc375c7a9a52645476ebc8002a41",
+                "reference": "6640ef3e096efc375c7a9a52645476ebc8002a41",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.1",
+                "monolog/monolog": "^1.19"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "MasterCard": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "MasterCard Worldwide",
+                    "email": "ApiSupport@mastercard.com"
+                }
+            ],
+            "description": "This is the core or base package of the MasterCard Api, all different flavours of Api provided by MasterCard will reuse this package",
+            "time": "2018-06-25T08:19:04+00:00"
         },
         {
             "name": "monolog/monolog",
