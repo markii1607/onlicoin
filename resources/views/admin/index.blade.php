@@ -1,58 +1,6 @@
 @extends('master')
-@section('header')
-<header>
-    <div class="container-fluid topnav">
-        <div class="row">
-            <div class="col-sm-2">
-                <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png"
-                        alt="onlicoin logo"></a>
-            </div>
-            <div class="col-sm-8">
-                <div class="exchangRates text-center">
-                    <div class="row">
-                        <div class="col-sm-1"></div>
-                        <div class="col-sm-2">USD</div>
-                        <div class="col-sm-2">BTC</div>
-                        <div class="col-sm-2">ETH</div>
-                        <div class="col-sm-2">OCT</div>
-                        <div class="col-sm-2">EUR</div>
-                        <div class="col-sm-1"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-1"></div>
-                        <div class="col-sm-2">$0.80</div>
-                        <div class="col-sm-2">$4,001.81</div>
-                        <div class="col-sm-2">$137.48</div>
-                        <div class="col-sm-2">$0.80</div>
-                        <div class="col-sm-2">$0.60</div>
-                        <div class="col-sm-1"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="extras">
-                    <div class="row">
-                        <img src="assets/images/users/avatar-1.jpg" alt="user-img"
-                            class="img-circle img-responsive inline">
-                        <img src="assets/images/users/avatar-1.jpg" alt="user-img"
-                            class="img-circle img-responsive inline">
-                        <p class="inline">Michael Alcala</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid navbar text-center">
-        <a class="inline" href="{{ route('auth-index') }}"><img src="assets/images/my-wallet.png" alt="My Wallet"></a>
-        <a class="inline" href="#"><img src="assets/images/earnings.png" alt="Earnings"></a>
-        <a class="inline" href="#"><img src="assets/images/merchants-partner.png" alt="Merchant Partners"></a>
-        <a class="inline" href="#"><img src="assets/images/buy-sell.png" alt="Buy / Sell"></a>
-        <a class="inline" href="#"><img src="assets/images/subscribers.png" alt="Subscribers"></a>
-    </div>
-</header>
-@stop
-
 @section('content')
+@include('admin.header-inside')
 <div class="container w-index">
     <div class="row">
         <div class="col-sm-4">
@@ -78,8 +26,9 @@
                                 IN</button></a>
                     </div>
                     <div class="col-sm-6">
-                        <a href="{{ route('auth-cout_remittance') }}"><button class=" btn btn-primary inline-block">COIN
-                                OUT</button></a>
+                        <a href="{{ route('auth-cout_remittance') }}">
+                        <button class=" btn btn-primary inline-block">COIN OUT</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -285,66 +234,24 @@
         </div>
     </div>
 </div>
-@stop
-<!--        footer-->
-<footer class="footer">
-    <div class="row">
-        <div class="col-sm-3 text-center">
-            <a href="#">© Onlicoin 2019</a>
-        </div>
-        <div class="col-sm-6 text-center">
-
-            <a href="#">About</a>
-
-            <a href="#">Blog</a>
-
-            <a href="#">Terms</a>
-
-            <a href="#">Privacy</a>
-
-            <a href="#">AML Policy</a>
-        </div>
-        <div class="col-sm-3 text-center">
-            <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/social_icons/fb-icon-oct.png"
-                    alt="Facebook"></a>
-            <a href="https://twitter.com/onlicointoken"><img src="assets/images/social_icons/twitter-icon-oct.png"
-                    alt="Twitter"></a>
-            <a href="https://www.linkedin.com/company/onlicoin"><img
-                    src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
+<!-- <div class="wrapper">
+    <div class="container">
+        <div class="row">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio necessitatibus esse molestias voluptate itaque at sapiente odit? Ex harum excepturi soluta atque ullam dolorum laboriosam facere vero id veritatis.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, beatae nesciunt nisi placeat quasi hic animi, quia perspiciatis ipsa rerum doloremque omnis sint porro laboriosam sapiente consectetur officia in similique.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, mollitia, voluptatum odit sit earum, laborum voluptatem quia aperiam reprehenderit cumque unde architecto. Quam doloremque qui ipsam sequi, impedit nam temporibus!
         </div>
     </div>
-</footer>
-</div>
-</div>
-
-<!--    scripts-->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/detect.js"></script>
-<script src="assets/js/fastclick.js"></script>
-
-<script src="assets/js/jquery.slimscroll.js"></script>
-<script src="assets/js/jquery.blockUI.js"></script>
-<script src="assets/js/waves.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/jquery.nicescroll.js"></script>
-<script src="assets/js/jquery.scrollTo.min.js"></script>
-
-<script src="assets/plugins/peity/jquery.peity.min.js"></script>
-
-<!-- jQuery  -->
-<script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
-<script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
-
-<script src="assets/plugins/morris/morris.min.js"></script>
-<script src="assets/plugins/raphael/raphael-min.js"></script>
-
-<script src="assets/plugins/jquery-knob/jquery.knob.js"></script>
-
-<script src="assets/pages/jquery.dashboard.js"></script>
-
-<script src="assets/js/jquery.core.js"></script>
-<script src="assets/js/jquery.app.js"></script>
-</body>
-
-</html>
+</div> -->
+@include('admin.footer-inside')
+@stop
+<!-- @section('styles')
+    <style>
+        .footer{
+            padding: 20px;
+        }
+        .footer ul li a{
+            color: #fff;
+        }
+    </style>
+@stop -->

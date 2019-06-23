@@ -1,20 +1,10 @@
 @extends('master')
 @section('header')
-<header>
-    <div class="container-fluid topnav">
-        <div class="row">
-            <div class="col-sm-3">
-                <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png"
-                        alt="onlicoin logo"></a>
-            </div>
-            <div class="col-sm-9"></div>
-        </div>
-    </div>
-</header>
+@include('pages.header-outside')
 @stop
 
 @section('content')
-<div class="container-fluid card-box cb-login text-center">
+<div class="container-fluid cb-login text-center">
     <form method="POST" action="{{ route('auth-verify') }}">
         {{ csrf_field() }}
         <div class="card-box about" id="cb-login">
@@ -45,32 +35,5 @@
 @stop
 
 @section('footer')
-<!--------------------------------------------------footer--------------------------------------------------->
-<footer class="footer">
-    <div class="row">
-        <div class="col-sm-3 text-center">
-            <a href="#">© Onlicoin 2019</a>
-        </div>
-        <div class="col-sm-6 text-center">
-
-            <a href="#">About</a>
-
-            <a href="#">Blog</a>
-
-            <a href="#">Terms</a>
-
-            <a href="#">Privacy</a>
-
-            <a href="#">AML Policy</a>
-        </div>
-        <div class="col-sm-3 text-center">
-            <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/social_icons/fb-icon-oct.png"
-                    alt="Facebook"></a>
-            <a href="https://twitter.com/onlicointoken"><img src="assets/images/social_icons/twitter-icon-oct.png"
-                    alt="Twitter"></a>
-            <a href="https://www.linkedin.com/company/onlicoin"><img
-                    src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
-        </div>
-    </div>
-</footer>
+@include('admin.footer-inside')
 @stop

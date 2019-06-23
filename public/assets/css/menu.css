@@ -399,9 +399,6 @@ File: Menu
   }
 }
 @media (max-width: 991px) {
-  .wrapper {
-    padding-top: 80px;
-  }
   .container {
     width: auto;
   }
