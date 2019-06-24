@@ -1,23 +1,6 @@
 @extends('master')
 @section('header')
-<header>
-    <div class="container-fluid topnav">
-        <div class="row">
-            <div class="col-sm-3">
-                <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png"
-                        alt="onlicoin logo"></a>
-            </div>
-            <div class="col-sm-9">
-                <ul id="reg-nav-links" class="pull-right text-center">
-                    <li><a href="#">FEATURES</a></li>
-                    <li><a href="#">WHITEPAPER</a></li>
-                    <li><a href="{{ route('auth-about') }}">ABOUT US</a></li>
-                    <li><a href="{{ route('login') }}">LOGIN</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
+@include('pages.header')
 @stop 
 
 @section('content')
@@ -41,19 +24,19 @@
                     <h5>Payment Method</h5>
                     <ul class="list-inline inline-block m-b-0">
                         <li>
-                            <img src="assets/images/Visa.png" alt="">
+                            <img src="assets/images/Payment_icons/Visa.png" alt="">
                         </li>
                         <li>
-                            <img src="assets/images/mastercard.png" alt="">
+                            <img src="assets/images/Payment_icons/mastercard.png" alt="">
                         </li>
                         <li>
-                            <img src="assets/images/7eleven.png" alt="">
+                            <img src="assets/images/Payment_icons/7eleven.png" alt="">
                         </li>
                         <li>
-                            <img src="assets/images/bitcoin.png" alt="">
+                            <img src="assets/images/Payment_icons/bitcoin.png" alt="">
                         </li>
                         <li>
-                            <img src="assets/images/ethereum.png" alt="">
+                            <img src="assets/images/Payment_icons/ethereum.png" alt="">
                         </li>
 
                     </ul>
@@ -88,31 +71,5 @@
 @stop 
 
 @section('footer')
-<footer class="footer">
-    <div class="row">
-        <div class="col-sm-3 text-center">
-            <a href="#">© Onlicoin 2019</a>
-        </div>
-        <div class="col-sm-6 text-center">
-
-            <a href="#">About</a>
-
-            <a href="#">Blog</a>
-
-            <a href="#">Terms</a>
-
-            <a href="#">Privacy</a>
-
-            <a href="#">AML Policy</a>
-        </div>
-        <div class="col-sm-3 text-center">
-            <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/social_icons/fb-icon-oct.png"
-                    alt="Facebook"></a>
-            <a href="https://twitter.com/onlicointoken"><img src="assets/images/social_icons/twitter-icon-oct.png"
-                    alt="Twitter"></a>
-            <a href="https://www.linkedin.com/company/onlicoin"><img
-                    src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
-        </div>
-    </div>
-</footer>
+@include('admin.footer-inside')
 @stop

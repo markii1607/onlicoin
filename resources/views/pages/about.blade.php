@@ -53,17 +53,17 @@
 
 @section('content')
 <!-- HOME -->
-<section class="home bg-img-1" id="home">
+<section class="home bg-img-about" id="home">
     <div class="bg-overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="home-fullscreen">
                     <div class="full-screen">
-                        <div class="home-wrapper home-wrapper-alt">
-                            <div class="col-sm-7" id="banner-msg">
+                        <div class="home-wrapper">
+                            <div class="col-sm-7" id="banner-msg-about">
                                 <!--                                <h1 data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1000">About Us</h1>-->
-                                <h1 data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1000"><i>"Grow Your Money By Doing Less"</i></h1>
+                                <h1>Grow Your Money By Doing Less</h1>
                             </div>
                             <div class="col-sm-5">
                             </div>
@@ -86,7 +86,7 @@
                 <h4 data-aos="fade-right" data-aos-duration="1000">Onlicoin aims to provide safe, fast, and easy remittance services and low-risk investment opportunities, both locally and internationally.</h4>
             </div>
             <div class="col-sm-6">
-                <img data-aos="fade-left" data-aos-duration="1000" style="width: 100%; height: 300px;" src="https://placeimg.com/1000/768/tech" alt="">
+                <img data-aos="fade-right" data-aos-duration="1000" style="width: 100%; height: 350px;" src="assets/images/About_Us/mission.jpg" alt="">
             </div>
         </div> <!-- end row -->
     </div> <!-- end container -->
@@ -101,12 +101,12 @@
             </div>
             <div class="col-sm-6">
                 <!--                    <h3><b>Values</b></h3>-->
-                <img data-aos="fade-left" data-aos-duration="1000" style="width: 100%; height: 300px;" src="https://placeimg.com/1000/768/tech" alt="">
+                <img data-aos="fade-left" data-aos-duration="1000" style="width: 100%; height: 350px;" src="assets/images/About_Us/Values/innovative.jpg" alt="">
             </div>
         </div> <!-- end row -->
         <div class="row">
             <div class="col-sm-6">
-                <img data-aos="fade-right" data-aos-duration="1000" style="width: 100%; height: 300px;" src="https://placeimg.com/1000/768/tech" alt="">
+                <img data-aos="fade-right" data-aos-duration="1000" style="width: 100%; height: 350px;" src="assets/images/About_Us/Values/transparent.jpg" alt="">
             </div>
             <div class="col-sm-6">
                 <h3 data-aos="fade-left" data-aos-duration="1000">Transparent</h3>
@@ -119,12 +119,12 @@
                 <h4 data-aos="fade-right" data-aos-duration="1000">Onlicoin is driven by its purpose to provide solutions to the people. It is important to us that when it comes to the services we provide, we make people’s lives easier.</h4>
             </div>
             <div class="col-sm-6">
-                <img data-aos="fade-left" data-aos-duration="1000" style="width: 100%; height: 300px;" src="https://placeimg.com/1000/768/tech" alt="">
+                <img data-aos="fade-left" data-aos-duration="1000" style="width: 100%; height: 350px;" src="assets/images/About_Us/Values/impact-oriented.jpg" alt="">
             </div>
         </div> <!-- end row -->
         <div class="row">
             <div class="col-sm-6">
-                <img data-aos="fade-right" data-aos-duration="1000" style="width: 100%; height: 300px;" src="https://placeimg.com/1000/768/tech" alt="">
+                <img data-aos="fade-right" data-aos-duration="1000" style="width: 100%; height: 350px;" src="assets/images/About_Us/Values/integrity.jpg" alt="">
             </div>
             <div class="col-sm-6">
                 <h3 data-aos="fade-left" data-aos-duration="1000">User - Centered</h3>
@@ -138,12 +138,12 @@
             </div>
             <div class="col-sm-6">
                 <!--                    <h3><b>Values</b></h3>-->
-                <img data-aos="fade-left" data-aos-duration="1000" style="width: 100%; height: 300px;" src="https://placeimg.com/1000/768/tech" alt="">
+                <img data-aos="fade-left" data-aos-duration="1000" style="width: 100%; height: 350px;" src="assets/images/About_Us/Values/passionate.jpg" alt="">
             </div>
         </div> <!-- end row -->
         <div class="row">
             <div class="col-sm-6">
-                <img data-aos="fade-right" data-aos-duration="1000" style="width: 100%; height: 300px;" src="https://placeimg.com/1000/768/tech" alt="">
+                <img data-aos="fade-right" data-aos-duration="1000" style="width: 100%; height: 350px;" src="https://placeimg.com/1000/768/tech" alt="">
             </div>
             <div class="col-sm-6">
                 <h3 data-aos="fade-left" data-aos-duration="1000">Passionate</h3>
@@ -179,58 +179,6 @@
 
 @section('footer')
 <!-- FOOTER -->
-<footer id="foot2" class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        COMPANY
-                    </h4>
-                    <p>About Us</p>
-                    <p>Contact Us</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        LEARN MORE
-                    </h4>
-                    <p>Fees</p>
-                    <p>FAQ</p>
-                    <p>Become a partner</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        BLOGS
-                    </h4>
-                    <p>Articles</p>
-                    <p>Newsletter</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        OUR TECHNOLOGY
-                    </h4>
-                    <p>How it works</p>
-                    <p>Safety</p>
-                </div>
-                <div class="clearfix"></div>
-                <br>
-                <br>
-                <h6 class="text-center copyright">Copyright 2019 Onlicoin, All rights reserved. <b><a href="#">Privacy Policy</a> <a href="">Terms of Service</a></b></h6>
-                <div class="social text-center">
-                    <a href="https://www.facebook.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/social_icons/fb-icon-oct.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/social_icons/twitter-icon-oct.png" alt="Twitter"></a>
-                    <a href="https://www.linkedin.com/company/onlicoin/"><img style="width:30px; height:30px" src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
-                </div>
-            </div>
-            <div class="col-sm-2"></div>
-            <div class="clearfix"></div>
-        </div>
-
-    </div>
-</footer>
+@include('pages.footer-outside')
 <!-- End Footer -->
-
-<!-- Back to top -->
-<a href="#" class="back-to-top" id="back-to-top"> <i class="glyphicon glyphicon-chevron-up"></i> </a>
 @stop

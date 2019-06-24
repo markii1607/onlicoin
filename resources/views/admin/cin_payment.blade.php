@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-    @include('admin.header')
+    @include('admin.header-inside')
 <!-- <div class="wrapper">
     <div class="container" id="index-wrap">
         <div class="row">

@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-    @include('admin.header')
+    @include('admin.header-inside')
 <div class="container-fluid rem-coinin card-box">
     <h4 class="m-t-0 m-b-30 panel-name">COIN IN</h4>
     <div class="row">

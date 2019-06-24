@@ -19,11 +19,7 @@ Route::get('logout', function() {
     return redirect('/login');
 });
 
-Route::get('test',function(){
-	return 'tesst';
-});
-
-Route::group(['middleware' => ['auth', 'verifyUser']], function() {
+// Route::group(['middleware' => ['auth', 'verifyUser']], function() {
     Route::get('/auth-verify', 'PagesController@verify')->name('auth-verify');
     Route::get('/auth-payment', 'PagesController@payment')->name('auth-payment');
     Route::get('/auth-index', 'PagesController@index')->name('auth-index');
@@ -36,7 +32,7 @@ Route::group(['middleware' => ['auth', 'verifyUser']], function() {
     Route::get('/auth-cout_payment', 'PagesController@cout_payment')->name('auth-cout_payment');
     Route::get('/auth-cout_remittance', 'PagesController@cout_remittance')->name('auth-cout_remittance');
     Route::get('/auth-cout_transfer', 'PagesController@cout_transfer')->name('auth-cout_transfer');
-});
+// });
 
 // Post Routes
 Route::post('/auth-verify', 'PagesController@userVerify')->name('auth-verify');
