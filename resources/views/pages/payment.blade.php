@@ -12,7 +12,7 @@
                     <li><a href="#">FEATURES</a></li>
                     <li><a href="#">WHITEPAPER</a></li>
                     <li><a href="{{ route('auth-about') }}">ABOUT US</a></li>
-                    <li><a href="{{ route('login') }}">LOGIN</a></li>
+                    <li><a href="{{ route('login') }}"><L></L>OGIN</a></li>
                 </ul>
             </div>
         </div>
@@ -59,25 +59,55 @@
                     </ul>
                     <br />
                     <br />
-                    <label for="ch-name">Cardholder Name</label>
-                    <input class="form-control" id="ch-name" type="text">
-                    <br />
-                    <label for="ch-name">Card Number</label>
-                    <input class="form-control" id="ch-name" type="text">
-                    <br />
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <label for="ch-name">Exp Date</label>
-                            <input class="form-control" id="ch-name" type="text">
-                        </div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-5">
-                            <label for="ch-name">CVC</label>
-                            <input class="form-control" id="ch-name" type="text">
-                        </div>
-                    </div>
-                    <br />
-                    <button class="btn btn-reverse btn-block"><a href="{{ route('auth-index') }}">Subscribe now</a></button>
+                    {{Form::open(['route'=>'auth-payment-save'])}}
+
+                    <div id="form-container">
+                        <div id="sq-ccbox">
+                            <form id="nonce-form" novalidate action="square-paying" method="post">
+
+                                {{ csrf_field() }}
+                                <fieldset>
+                                    <div id="sq-card-number"></div>
+                                    <div class="third">
+                                        <div id="sq-expiration-date"></div>
+                                    </div>
+                                    <div class="third">
+                                        <div id="sq-cvv"></div>
+                                    </div>
+                                    <div class="third">
+                                        <div id="sq-postal-code"></div>
+                                    </div>
+                                </fieldset>
+                                <button id="sq-creditcard" class="button-credit-card" onclick="onGetCardNonce(event)">Pay $1.00</button>
+                                <!--
+                                  After a nonce is generated it will be assigned to this hidden input field.
+                                -->
+                                <input type="hidden" id="card-nonce" name="nonce">
+                            </form>
+                        </div> <!-- end #sq-ccbox -->
+                    </div> <!-- end #form-container -->
+
+                    @include('payment_test.sq_payment_js')
+                    {{--<label for="ch-name">Cardholder Name</label>--}}
+                    {{--<input class="form-control" id="ch-name" type="text">--}}
+                    {{--<br />--}}
+                    {{--<label for="ch-name">Card Number</label>--}}
+                    {{--<input class="form-control" id="ch-name" type="text">--}}
+                    {{--<br />--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-sm-5">--}}
+                            {{--<label for="ch-name">Exp Date</label>--}}
+                            {{--<input class="form-control" id="ch-name" type="text">--}}
+                        {{--</div>--}}
+                        {{--<div class="col-sm-2"></div>--}}
+                        {{--<div class="col-sm-5">--}}
+                            {{--<label for="ch-name">CVC</label>--}}
+                            {{--<input class="form-control" id="ch-name" type="text">--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<br />--}}
+                    <button class="btn btn-reverse btn-block"><button>Subscribe now</button></button>
+                    {{Form::close()}}
                     <br />
                     <br />
                     <a href="#" class="pull-right"><a href="{{ route('auth-index') }}">Skip for now >></a></a>
@@ -87,6 +117,11 @@
     </div>
 @stop 
 
+@section('styles')
+    <link rel="stylesheet" type="text/css" href="{{url('/css/mysqpaymentform.css')}}">
+@stop
+@section('scripts')
+@stop
 @section('footer')
 <footer class="footer">
     <div class="row">
@@ -116,3 +151,4 @@
     </div>
 </footer>
 @stop
+

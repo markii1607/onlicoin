@@ -59,7 +59,8 @@
 
     {{--<script src="assets/js/jquery.core.js"></script>--}}
     {{--<script src="assets/js/jquery.app.js"></script>--}}
-   {{--<script src="assets/js/modernizr.min.js"></script>--}}
+   {{--<script src="assets/js/modernizr.min.js"></script>--}}    
+	@yield('scripts')
 
 </body>
 
