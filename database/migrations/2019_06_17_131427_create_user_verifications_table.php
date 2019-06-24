@@ -17,6 +17,8 @@ class CreateUserVerificationsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('verified_id');
+            $table->boolean('status')->default(0);
+            $table->float('amount',12,12)->nullable();
             $table->timestamps();
         });
     }

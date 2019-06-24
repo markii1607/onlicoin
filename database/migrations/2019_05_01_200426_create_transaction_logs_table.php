@@ -14,11 +14,14 @@ class CreateTransactionLogsTable extends Migration
     {
         Schema::create('transaction_logs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->nullable();
-            $table->datetime('transact_date');
-            $table->string('transact_desc',255);
+            $table->integer('user_id');
+            $table->integer('other_user_id')->nullable();
+            $table->string('currency');
+            $table->string('transact_type');
+            $table->string('transact_desc',255)->nullable();
+            $table->longText('transact_array')->nullable();
             $table->decimal('transact_amount',12,12);
-            $table->decimal('transact_balance',12,12);
+            $table->timestamp('transact_date');
             $table->timestamps();
         });
     }
