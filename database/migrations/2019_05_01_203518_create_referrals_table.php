@@ -12,12 +12,12 @@ class CreateReferralsTable extends Migration
      */
     public function up()
     {
+
         Schema::create('referrals', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->nullable();
-            $table->datetime('referred_date');
-            $table->integer('referred_user');
-            $table->integer('referral_classification')->nullable();
+            $table->integer('user_id');
+            $table->integer('referral_id');
+            $table->timestamp('referred_date');
             $table->timestamps();
         });
     }
