@@ -25,10 +25,6 @@ File: Core
 body {
   background: #ebeff2;
   font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin: 0;
-  overflow-x: hidden;
-  padding-bottom: 65px;
-  color: #797979;
 }
 html {
   position: relative;
@@ -89,9 +85,6 @@ a:active {
 a:focus {
   outline: 0;
   text-decoration: none;
-}
-.container {
-  width: 90%;
 }
 .container-alt {
   margin-left: auto;
