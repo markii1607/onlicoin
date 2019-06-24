@@ -19,6 +19,10 @@ Route::get('logout', function() {
     return redirect('/login');
 });
 
+Route::get('test',function(){
+	return 'tesst';
+});
+
 Route::group(['middleware' => ['auth', 'verifyUser']], function() {
     Route::get('/auth-verify', 'PagesController@verify')->name('auth-verify');
     Route::get('/auth-payment', 'PagesController@payment')->name('auth-payment');

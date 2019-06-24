@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
-use Auth;
 
 class TryController extends Controller
 {
     public function index(Request $request) {
 
-        return url()->current();
+        return $this->users();
+    }
+    public function users() {
+
+        return User::all();
     }
 }

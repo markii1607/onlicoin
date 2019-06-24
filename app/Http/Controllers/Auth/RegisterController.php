@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
-use App\VerifyUser;
-use Request;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\VerifyMail;
+use App\User;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-// use RealRashid\SweetAlert\Facades\Alert;
 
 class RegisterController extends Controller
 {
@@ -32,14 +31,15 @@ class RegisterController extends Controller
      *
      * @var string
      */
-     protected $redirectTo = '/auth-verify'; 
-//	protected $redirectTo = '/auth-payment';
+    protected $redirectTo = '/auth-index';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+
+
     public function __construct()
     {
         $this->middleware('guest');
@@ -61,7 +61,6 @@ class RegisterController extends Controller
             'contactNo' => 'required|string|min:11'
         ]);
     }
-
     /**
      * Create a new user instance after a valid registration.
      *
@@ -78,11 +77,10 @@ class RegisterController extends Controller
             'contactNo' => $data['contactNo'],
             'user_referralCode' => $data['user_referralCode'],
             'user_Datejoined' => date('Y-m-d H:i:s'),
+            'referral_code' => Hash::make($data['email'].time()),
             'token' => $this->generateCode()
         ]);
-
         Mail::to($data['email'])->send(new VerifyMail($user));
-
         return $user;
     }
 }

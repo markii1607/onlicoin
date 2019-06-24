@@ -230,55 +230,17 @@
 
 @section('footer')
 <!-- FOOTER -->
-<footer id="foot2" class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        COMPANY
-                    </h4>
-                    <p>About Us</p>
-                    <p>Contact Us</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        LEARN MORE
-                    </h4>
-                    <p>Fees</p>
-                    <p>FAQ</p>
-                    <p>Become a partner</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        BLOGS
-                    </h4>
-                    <p>Articles</p>
-                    <p>Newsletter</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="head-links">
-                        OUR TECHNOLOGY
-                    </h4>
-                    <p>How it works</p>
-                    <p>Safety</p>
-                </div>
-                <div class="clearfix"></div>
-                <br>
-                <br>
-                <h6 class="text-center copyright">Copyright 2019 Onlicoin, All rights reserved. <b><a href="#">Privacy Policy</a> <a href="">Terms of Service</a></b></h6>
-                <div class="social text-center">
-                    <a href="https://www.facebook.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/social_icons/fb-icon-oct.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/onlicointoken"><img style="width:30px; height:30px" src="assets/images/social_icons/twitter-icon-oct.png" alt="Twitter"></a>
-                    <a href="https://www.linkedin.com/company/onlicoin/"><img style="width:30px; height:30px" src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
-                </div>
-            </div>
-            <div class="col-sm-2"></div>
-            <div class="clearfix"></div>
-        </div>
-
-    </div>
-</footer>
+@include('pages.footer-outside')
 <!-- End Footer -->
+
+@stop
+@section('styles')
+    <style>
+        .footer h4 {
+            font-size: 1.1em;
+        }
+        .footer p {
+            font-size: 0.8em;
+        }
+    </style>
 @stop
