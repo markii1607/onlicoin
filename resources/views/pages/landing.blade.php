@@ -232,4 +232,15 @@
 <!-- FOOTER -->
 @include('pages.footer-outside')
 <!-- End Footer -->
+
+@stop
+@section('styles')
+    <style>
+        .footer h4 {
+            font-size: 1.1em;
+        }
+        .footer p {
+            font-size: 0.8em;
+        }
+    </style>
 @stop
