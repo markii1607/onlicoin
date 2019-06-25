@@ -1,24 +1,24 @@
 @extends('master')
 @section('header')
-<header>
-    <div class="container-fluid topnav">
-        <div class="row">
-            <div class="col-sm-3">
-                <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png"
-                        alt="onlicoin logo"></a>
-            </div>
-            <div class="col-sm-9">
-                <ul id="reg-nav-links" class="pull-right text-center">
-                    <li><a href="#">FEATURES</a></li>
-                    <li><a href="#">WHITEPAPER</a></li>
-                    <li><a href="{{ route('auth-about') }}">ABOUT US</a></li>
-                    <li><a href="{{ route('login') }}"><L></L>OGIN</a></li>
-                </ul>
+    <header>
+        <div class="container-fluid topnav">
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png"
+                                                  alt="onlicoin logo"></a>
+                </div>
+                <div class="col-sm-9">
+                    <ul id="reg-nav-links" class="pull-right text-center">
+                        <li><a href="#">FEATURES</a></li>
+                        <li><a href="#">WHITEPAPER</a></li>
+                        <li><a href="{{ route('auth-about') }}">ABOUT US</a></li>
+                        <li><a href="{{ route('login') }}"><L></L>OGIN</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</header>
-@stop 
+    </header>
+@stop
 
 @section('content')
     <div class="wrapper" id="paymentwrap">
@@ -59,26 +59,32 @@
                     </ul>
                     <br />
                     <br />
-                    {{Form::open(['route'=>'auth-payment-save'])}}
 
                     <div id="form-container">
                         <div id="sq-ccbox">
-                            <form id="nonce-form" novalidate action="square-paying" method="post">
-
+                            <form id="nonce-form" novalidate action="payments/square-paying" method="post">
                                 {{ csrf_field() }}
-                                <fieldset>
-                                    <div id="sq-card-number"></div>
-                                    <div class="third">
-                                        <div id="sq-expiration-date"></div>
+                                <label for="">Test Card: <span>4111111111111111</span></label>
+                                <label for="">Test CCV/Expiration Date/Postal: <span>Any</span></label>
+                                <fieldset class="payment_input_form">
+                                    <div class="row">
+                                        <div class="third col-xs-12">
+                                            <div id="sq-card-number"></div>
+                                        </div>
+                                        <div class="third col-xs-6">
+                                            <div id="sq-expiration-date"></div>
+                                        </div>
+                                        <div class="third col-xs-6">
+                                            <div id="sq-cvv"></div>
+                                        </div>
+
+                                        <div class="third col-xs-6">
+                                            <div id="sq-postal-code"></div>
+                                        </div>
                                     </div>
-                                    <div class="third">
-                                        <div id="sq-cvv"></div>
-                                    </div>
-                                    <div class="third">
-                                        <div id="sq-postal-code"></div>
-                                    </div>
+
                                 </fieldset>
-                                <button id="sq-creditcard" class="button-credit-card" onclick="onGetCardNonce(event)">Pay $1.00</button>
+                                <button id="sq-creditcard" class="button-credit-card" onclick="onGetCardNonce(event)">Subscribe Now</button>
                                 <!--
                                   After a nonce is generated it will be assigned to this hidden input field.
                                 -->
@@ -86,6 +92,7 @@
                             </form>
                         </div> <!-- end #sq-ccbox -->
                     </div> <!-- end #form-container -->
+                    <p><strong>Developers Note:</strong> The Postal Code will be remove upon Production. </p>
 
                     @include('payment_test.sq_payment_js')
                     {{--<label for="ch-name">Cardholder Name</label>--}}
@@ -95,36 +102,62 @@
                     {{--<input class="form-control" id="ch-name" type="text">--}}
                     {{--<br />--}}
                     {{--<div class="row">--}}
-                        {{--<div class="col-sm-5">--}}
-                            {{--<label for="ch-name">Exp Date</label>--}}
-                            {{--<input class="form-control" id="ch-name" type="text">--}}
-                        {{--</div>--}}
-                        {{--<div class="col-sm-2"></div>--}}
-                        {{--<div class="col-sm-5">--}}
-                            {{--<label for="ch-name">CVC</label>--}}
-                            {{--<input class="form-control" id="ch-name" type="text">--}}
-                        {{--</div>--}}
+                    {{--<div class="col-sm-5">--}}
+                    {{--<label for="ch-name">Exp Date</label>--}}
+                    {{--<input class="form-control" id="ch-name" type="text">--}}
+                    {{--</div>--}}
+                    {{--<div class="col-sm-2"></div>--}}
+                    {{--<div class="col-sm-5">--}}
+                    {{--<label for="ch-name">CVC</label>--}}
+                    {{--<input class="form-control" id="ch-name" type="text">--}}
+                    {{--</div>--}}
                     {{--</div>--}}
                     {{--<br />--}}
-                    <button class="btn btn-reverse btn-block"><button>Subscribe now</button></button>
-                    {{Form::close()}}
+                    {{--<button class="btn btn-reverse btn-block"><button>Subscribe now</button></button>--}}
+                    {{--{{Form::close()}}--}}
                     <br />
                     <br />
-                    <a href="#" class="pull-right"><a href="{{ route('auth-index') }}">Skip for now >></a></a>
+                    <a href="{{ route('auth-index') }}" class="pull-right">Skip for now >></a>
                 </div>
-            </div>  
+            </div>
         </div>
     </div>
-@stop 
+@stop
 
 @section('styles')
     <link rel="stylesheet" type="text/css" href="{{url('/css/mysqpaymentform.css')}}">
+    <style>
+        /*#form-container{*/
+            /*display: none;*/
+        /*}*/
+        .payment_input_form{
+            min-height: 200px;
+        }
+        #sq-creditcard{
+            margin: auto;
+            display: block;
+            background-color: #0f75bc;
+            color: #fff;
+            border-radius: 4px;
+            border: 1px solid #0f75bc;
+            padding: 9px 32px;
+            margin-top: 11px;
+        }
+        #nonce-form .third iframe{
+            border: 1px solid #ccc;
+        }
+    </style>
 @stop
 @section('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.payment_input_form').LoadingOverlay('show')
+        });
+    </script>
 @stop
 @section('footer')
-<footer class="footer">
-    <div class="row">
+    <footer class="footer">
         <div class="col-sm-3 text-center">
             <a href="#">© Onlicoin 2019</a>
         </div>
@@ -142,13 +175,12 @@
         </div>
         <div class="col-sm-3 text-center">
             <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/social_icons/fb-icon-oct.png"
-                    alt="Facebook"></a>
+                                                                  alt="Facebook"></a>
             <a href="https://twitter.com/onlicointoken"><img src="assets/images/social_icons/twitter-icon-oct.png"
-                    alt="Twitter"></a>
+                                                             alt="Twitter"></a>
             <a href="https://www.linkedin.com/company/onlicoin"><img
-                    src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
+                        src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
         </div>
-    </div>
-</footer>
+    </footer>
 @stop
 

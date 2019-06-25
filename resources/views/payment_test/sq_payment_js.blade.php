@@ -24,7 +24,7 @@
         inputStyles: [{
             fontSize: '16px',
             lineHeight: '24px',
-            padding: '16px',
+            padding: '14px',
             placeholderColor: '#a0a0a0',
             backgroundColor: 'transparent'
         }],
@@ -42,11 +42,11 @@
             elementId: 'sq-expiration-date',
             placeholder: 'MM/YY'
         },
-        postalCode: false,
-//        postalCode: {
-//            elementId: 'sq-postal-code',
-//            placeholder: 'Postal'
-//        },
+//        postalCode: false,
+        postalCode: {
+            elementId: 'sq-postal-code',
+            placeholder: 'Postal'
+        },
 
 // SqPaymentForm callback functions
         callbacks: {
@@ -54,6 +54,9 @@
              * callback function: cardNonceResponseReceived
              * Triggered when: SqPaymentForm completes a card nonce request
              */
+            paymentFormLoaded: function() {
+                $('.payment_input_form').LoadingOverlay('hide')
+            },
             cardNonceResponseReceived: function (errors, nonce, cardData) {
                 if (errors) {
                     // Log errors from nonce generation to the browser developer console.
