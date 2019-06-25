@@ -28,6 +28,7 @@
             </div>
             <div class="card-box" id="cb-payment">
                 <div class="col-sm-5">
+
                     <p>Subscription fee:</p>
                     <h1 class="inline"><b>$56.63</b></h1>
                     <p class="inline">only</p>
@@ -131,7 +132,7 @@
             /*display: none;*/
         /*}*/
         .payment_input_form{
-            min-height: 200px;
+            min-height: 180px;
         }
         #sq-creditcard{
             margin: auto;
@@ -141,7 +142,7 @@
             border-radius: 4px;
             border: 1px solid #0f75bc;
             padding: 9px 32px;
-            margin-top: 11px;
+            margin-bottom: 11px;
         }
         #nonce-form .third iframe{
             border: 1px solid #ccc;
