@@ -1160,3 +1160,55 @@ footer a:hover{
     height: 30px;
     width: 30px;
 }
+
+
+/* whitepaper */
+.whitepaperlinks{
+    display: flex;
+    flex-direction: column;
+    line-height: 3;
+    position: fixed;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.whitepaperlinks ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.whitepaperlinks a{
+    color: grey;
+}
+
+.whitepaperlinks a:hover{
+    cursor: pointer;
+    color: #0f75bc;
+}
+.whitepaperlinks a:active{
+    color: tomato;
+}
+
+.whitepapercontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+.whitepapercontent p{
+    line-height: 2;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+.whitepapercontent li{
+    line-height: 2;
+    font-size: 18px;
+}
+.whitepapercontent h2{
+    margin-top: 12px;
+}
+
+.wp{
+    margin-top: 80px;
+}
+/* whitepaper end */

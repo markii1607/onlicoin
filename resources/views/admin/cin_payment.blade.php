@@ -132,32 +132,5 @@
 @stop
 
 @section('footer')
-<!--        footer-->
-<footer class="footer">
-    <div class="row">
-        <div class="col-sm-3 text-center">
-            <a href="#">© Onlicoin 2019</a>
-        </div>
-        <div class="col-sm-6 text-center">
-
-            <a href="#">About</a>
-
-            <a href="#">Blog</a>
-
-            <a href="#">Terms</a>
-
-            <a href="#">Privacy</a>
-
-            <a href="#">AML Policy</a>
-        </div>
-        <div class="col-sm-3 text-center">
-            <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/social_icons/fb-icon-oct.png"
-                    alt="Facebook"></a>
-            <a href="https://twitter.com/onlicointoken"><img src="assets/images/social_icons/twitter-icon-oct.png"
-                    alt="Twitter"></a>
-            <a href="https://www.linkedin.com/company/onlicoin"><img
-                    src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
-        </div>
-    </div>
-</footer>
+@include('admin.footer-inside')
 @stop

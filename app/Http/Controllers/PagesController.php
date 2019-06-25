@@ -65,6 +65,18 @@ class PagesController extends Controller
     	return view('admin.cout_transfer');
     }
 
+    public function whitepaper () {
+    	return view('pages.whitepaper');
+    }
+
+    public function terms () {
+    	return view('pages.terms');
+    }
+
+    public function policy () {
+    	return view('pages.policy');
+    }
+
     public function userVerify(Request $request) {
         $code = auth()->user()->token;
         $verified = auth()->user()->verified;
