@@ -19,7 +19,12 @@ Route::get('logout', function() {
     return redirect('/login');
 });
 
-// Route::group(['middleware' => ['auth', 'verifyUser']], function() {
+
+Route::get('zxc',function(){
+   auth()->loginUsingId(1);
+});
+
+Route::group(['middleware' => ['auth', 'verifyUser']], function() {
     Route::get('/auth-verify', 'PagesController@verify')->name('auth-verify');
     Route::get('/auth-payment', 'PagesController@payment')->name('auth-payment');
     Route::get('/auth-index', 'PagesController@index')->name('auth-index');
@@ -32,8 +37,21 @@ Route::get('logout', function() {
     Route::get('/auth-cout_payment', 'PagesController@cout_payment')->name('auth-cout_payment');
     Route::get('/auth-cout_remittance', 'PagesController@cout_remittance')->name('auth-cout_remittance');
     Route::get('/auth-cout_transfer', 'PagesController@cout_transfer')->name('auth-cout_transfer');
-// });
 
+
+    Route::post('/auth-payment-save', 'PaymentController@payment')->name('auth-payment-save');
+});
+
+
+
+Route::prefix('payments')->as('payments')->group(function(){
+
+
+    Route::get('square-index','Payments\SquareUpController@index');
+    Route::get('square-locations','Payments\SquareUpController@get_locations');
+    Route::post('square-paying','Payments\SquareUpController@paying');
+
+});
 // Post Routes
 Route::post('/auth-verify', 'PagesController@userVerify')->name('auth-verify');
 
