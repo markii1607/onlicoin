@@ -33,7 +33,7 @@
 
 /*======= 1.Reset ======== */
 body {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #496174;
     background: #fff;
     font-size: 14px;
@@ -172,7 +172,14 @@ a:focus,
 }
 
 /* Background Images */
-.bg-img-1 {
+.bg-img-about {
+    background: url("../images/About_Us/AboutUs.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+.bg-img-landing {
     background: url("../images/site-cover.jpg") no-repeat;
     background-size: cover;
     position: relative;
@@ -741,14 +748,14 @@ ul.social-icons li a i {
     -o-transition: all 0.17s ease-in-out;
 }
 
-.footer .navbar-nav {
+/* .footer .navbar-nav {
     margin-top: 10px;
 }
 
 .footer .navbar-nav li a {
     color: rgba(255, 255, 255, 0.7);
     background-color: transparent !important;
-}
+} */
 
 
 /* == 12. Other pages CSS === */
@@ -988,13 +995,16 @@ textarea.form-control {
     height: 60px;
 }
 
-#banner-msg {
-    padding: 64px 0px;
+#banner-msg-landing,
+#banner-msg-about {
+    padding-top: 70px;
+    height: 70vh;
 }
 
-#banner-msg h1 {
+#banner-msg-landing h1,
+#banner-msg-about h1 {
     color: white;
-    font-size: 50px;
+    font-size: 55px;
 }
 
 #features img {
@@ -1093,3 +1103,112 @@ textarea.form-control {
 p.adjust{
     margin-top:45px;
 }
+
+.social a{
+    margin: 0px 25px;
+}
+
+
+/* Footer styles */
+footer{
+    background-color: #0f75bc;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+footer a{
+    color: rgb(255, 255, 255, 0.7);
+}
+footer a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.links > div{
+    margin: 40px 50px;
+}
+.links a,
+.copyright a{
+    font-size: 16px;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright h5{
+    color: white;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons img{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 2px;
+    margin-bottom: 40px;
+    height: 30px;
+    width: 30px;
+}
+
+
+/* whitepaper */
+.whitepaperlinks{
+    display: flex;
+    flex-direction: column;
+    line-height: 3;
+    position: fixed;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.whitepaperlinks ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.whitepaperlinks a{
+    color: grey;
+}
+
+.whitepaperlinks a:hover{
+    cursor: pointer;
+    color: #0f75bc;
+}
+.whitepaperlinks a:active{
+    color: tomato;
+}
+
+.whitepapercontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+.whitepapercontent p{
+    line-height: 2;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+.whitepapercontent li{
+    line-height: 2;
+    font-size: 18px;
+}
+.whitepapercontent h2{
+    margin-top: 12px;
+}
+
+.wp{
+    margin-top: 80px;
+}
+/* whitepaper end */

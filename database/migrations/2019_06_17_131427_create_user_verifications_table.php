@@ -15,10 +15,10 @@ class CreateUserVerificationsTable extends Migration
     {
         Schema::create('user_verifications', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('verified_id');
+            $table->unsignedInteger('user_id')->nullable();
+            $table->unsignedInteger('verified_id');
             $table->boolean('status')->default(0);
-            $table->float('amount',12,12)->nullable();
+            $table->decimal('amount', 12, 12)->nullable();
             $table->timestamp('valid_until');
             $table->timestamps();
         });

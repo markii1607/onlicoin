@@ -15,9 +15,10 @@ class CreateUserBalancesTable extends Migration
     {
         Schema::create('user_balances', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->index();
+            $table->unsignedInteger('user_id')->index();
             $table->decimal('current_fund',12,12);
             $table->decimal('manage_fund',12,12);
+            $table->decimal('subscription_fund',12,12);
             $table->decimal('oct',12,12);
             $table->decimal('cash',12,12);
             $table->timestamps();

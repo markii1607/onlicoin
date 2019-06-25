@@ -16,7 +16,11 @@
     <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/onlicoinStyle.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="alertifyjs/css/alertify.min.css" rel="stylesheet">
+    <link href="alertifyjs/css/themes/default.min.css" rel="stylesheet">
+    <link href="alertifyjs/css/themes/semantic.min.css" rel="stylesheet">
     @yield('styles')
 </head>
 
@@ -56,10 +60,11 @@
     {{--<script src="assets/plugins/jquery-knob/jquery.knob.js"></script>--}}
 
     <script src="assets/pages/jquery.dashboard.js"></script>
+    <script src="alertifyjs/alertify.min.js"></script>
 
     {{--<script src="assets/js/jquery.core.js"></script>--}}
     {{--<script src="assets/js/jquery.app.js"></script>--}}
-   {{--<script src="assets/js/modernizr.min.js"></script>--}}    
+    {{--<script src="assets/js/modernizr.min.js"></script>--}}    
 	@yield('scripts')
 
 </body>

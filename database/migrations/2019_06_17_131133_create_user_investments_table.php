@@ -15,8 +15,8 @@ class CreateUserInvestmentsTable extends Migration
     {
         Schema::create('user_investments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->index();
-            $table->integer('formula_id')->index();
+            $table->unsignedInteger('user_id')->index();
+            $table->unsignedInteger('formula_id')->index();
             $table->timestamps();
         });
     }

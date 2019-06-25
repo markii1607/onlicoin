@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWallets1Table extends Migration
+class CreateManagedFundsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,14 @@ class CreateWallets1Table extends Migration
      */
     public function up()
     {
-        Schema::create('wallets', function (Blueprint $table) {
+        Schema::create('managed_funds', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->nullable();
-            $table->decimal('wallet_amount',12,12);
-            $table->string('wallet_address', 255);
-            $table->string('wallet_category', 255);
+            $table->datetime('mf_date_start');
+            $table->datetime('mf_date_end');
+            $table->decimal('mf_amount',12,12);
+            $table->string('mf_date_range',255);
+            $table->decimal('mf_total_balance',12,12);
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateWallets1Table extends Migration
      */
     public function down()
     {
-        Schema::drop('wallets');
+        Schema::drop('managed_funds');
     }
 }

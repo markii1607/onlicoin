@@ -14,19 +14,21 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('first_name');
-            $table->string('middle_name')->nullable();
-            $table->string('last_name');
+            $table->string('email')->unique();
             $table->string('username')->nullable();
             $table->string('password');
-            $table->string('email')->unique();
-            $table->string('contactNo');
-            $table->integer('user_classification')->nullable();
-            $table->string('user_referralCode')->nullable();
-            $table->datetime('user_Datejoined');
+            $table->string('ip_address');
+            $table->datetime('user_date_joined');
             $table->boolean('verified')->default(false);
             $table->string('token');
             $table->string('referral_code')->nullable();
+            $table->boolean('is_subscribed')->default(0);
+            $table->boolean('is_active')->default(1);
+            $table->string('g_link')->nullable();
+            $table->string('fb_link')->nullable();
+            $table->string('ig_link')->nullable();
+            $table->string('tw_link')->nullable();
+            $table->string('LI_link')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

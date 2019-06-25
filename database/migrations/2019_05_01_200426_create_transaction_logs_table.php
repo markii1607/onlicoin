@@ -14,8 +14,8 @@ class CreateTransactionLogsTable extends Migration
     {
         Schema::create('transaction_logs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('other_user_id')->nullable();
+            $table->unsignedInteger('user_id')->nullable();
+            $table->unsignedInteger('other_user_id')->nullable();
             $table->string('currency');
             $table->string('transact_type');
             $table->string('transact_desc',255)->nullable();
