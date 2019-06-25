@@ -14,11 +14,11 @@ class CreateUserLogsTable extends Migration
     {
         Schema::create('user_logs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->nullable();
-            $table->datetime('loginDate');
-            $table->datetime('logoutDate');
-            $table->string('browserUsed',255)->nullable();
-            $table->ipAddress('IPaddress')->nullable();
+            $table->unsignedInteger('user_id')->nullable();
+            $table->datetime('login_date');
+            $table->datetime('logout_date');
+            $table->string('browser_used')->nullable();
+            $table->ipAddress('ip_address')->nullable();
             $table->timestamps();
         });
     }

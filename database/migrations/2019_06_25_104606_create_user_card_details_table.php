@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserVerificationsTable extends Migration
+class CreateUserCardDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateUserVerificationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_verifications', function (Blueprint $table) {
+        Schema::create('user_card_details', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id')->nullable();
-            $table->unsignedInteger('verified_id');
-            $table->boolean('status')->default(0);
-            $table->decimal('amount', 12, 12)->nullable();
-            $table->timestamp('valid_until');
+            $table->string('acct_no');
+            $table->string('acct_name');
+            $table->string('exp_date');
+            $table->string('cvc');
+            $table->string('card_no');
+            $table->string('card_type');
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ class CreateUserVerificationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_verifications');
+        Schema::dropIfExists('user_card_details');
     }
 }
