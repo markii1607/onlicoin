@@ -32,6 +32,9 @@ Route::get('logout', function() {
     Route::get('/auth-cout_payment', 'PagesController@cout_payment')->name('auth-cout_payment');
     Route::get('/auth-cout_remittance', 'PagesController@cout_remittance')->name('auth-cout_remittance');
     Route::get('/auth-cout_transfer', 'PagesController@cout_transfer')->name('auth-cout_transfer');
+    Route::get('/auth-whitepaper', 'PagesController@whitepaper')->name('auth-whitepaper');
+    Route::get('/auth-terms', 'PagesController@terms')->name('auth-terms');
+    Route::get('/auth-policy', 'PagesController@policy')->name('auth-policy');
 // });
 
 // Post Routes

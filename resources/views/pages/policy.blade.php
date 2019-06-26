@@ -1,19 +1,7 @@
-<!-- <div class="header">
-    <a href="{{ url('/') }}">
-        <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
-    </a>
-    <ul>
-        <li><a href="#">FEATURES</a></li>
-        <li><a href="{{ route('auth-whitepaper')}}">WHITEPAPER</a></li>
-        <li><a href="{{ route('auth-about')}}">ABOUT US</a></li>
-        <li><a href="{{ route('login')}}">LOGIN</a></li>
-        <li><a href="{{ route('register')}}">SIGN UP</a></li>
-    </ul>
-</div> -->
-
+@extends('website_layout')
 @section('header')
 <!-- Navbar -->
-<div class="navbar navbar-custom sticky navbar-fixed-top" role="navigation" id="sticky-nav" style="background-color: #0f75bc;">
+<div class="navbar navbar-custom sticky navbar-fixed-top" role="navigation" id="sticky-nav">
     <div class="container">
 
         <!-- Navbar-header -->
@@ -42,7 +30,7 @@
                     <a href="#features" class="nav-link">FEATURES</a>
                 </li>
                 <li>
-                    <a href="{{ route('auth-whitepaper')}}" class="nav-link">WHITEPAPER</a>
+                    <a href="#htu" class="nav-link">WHITEPAPER</a>
                 </li>
                 <li>
                     <a href="{{route('auth-about')}}" class="nav-link">ABOUT US</a>
@@ -61,4 +49,14 @@
     <!-- end container -->
 </div>
 <!-- End navbar-custom -->
+@stop
+@section('content')
+<p>this is the policy page</p>
+@stop
+
+@section('footer')
+<!-- FOOTER -->
+@include('pages.footer-outside')
+<!-- End Footer -->
+
 @stop

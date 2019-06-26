@@ -21,13 +21,14 @@
                     <div class="col-sm-4 text-center">ETH</div>
                 </div>
                 <div class="row cin-cout-btn">
-                    <div class="col-sm-6">
-                        <a href="{{ route('auth-cin_remittance') }}"><button class=" btn btn-primary inline-block">COIN
-                                IN</button></a>
+                    <div class="col-sm-6 text-center">
+                        <a href="{{ route('auth-cin_remittance') }}">
+                            <button class=" btn btn-primary btn-block">COIN IN</button>
+                        </a>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 text-center">
                         <a href="{{ route('auth-cout_remittance') }}">
-                        <button class=" btn btn-primary inline-block">COIN OUT</button>
+                            <button class=" btn btn-primary btn-block">COIN OUT</button>
                         </a>
                     </div>
                 </div>

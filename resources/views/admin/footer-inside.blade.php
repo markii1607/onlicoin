@@ -7,9 +7,9 @@
 
             <a href="#">Blog</a>
 
-            <a href="#">Terms</a>
+            <a href="{{ route('auth-terms')}}">Terms</a>
 
-            <a href="#">Privacy</a>
+            <a href="{{ route('auth-policy')}}">Privacy</a>
 
             <a href="#">AML Policy</a>
         </div>
