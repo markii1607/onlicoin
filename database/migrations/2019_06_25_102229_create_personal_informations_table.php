@@ -19,13 +19,13 @@ class CreatePersonalInformationsTable extends Migration
             $table->string('first_name');
             $table->string('middle_name')->nullable();
             $table->string('last_name');
-            $table->string('suffix_name');
+            $table->string('suffix_name')->nullable();
             $table->text('address1')->nullable();
             $table->text('address2')->nullable();
             $table->date('date_of_birth')->nullable();
             $table->string('place_of_birth')->nullable();
-            $table->string('country_code');
-            $table->string('contact_no');
+            $table->string('country_code')->nullable();
+            $table->string('contact_no')->nullable();
             $table->timestamps();
         });
     }

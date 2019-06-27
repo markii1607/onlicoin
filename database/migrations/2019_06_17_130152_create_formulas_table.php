@@ -15,11 +15,11 @@ class CreateFormulasTable extends Migration
     {
         Schema::create('formulas', function (Blueprint $table) {
             $table->increments('id');
-            $table->decimal('investment_amount',12,12);
-            $table->decimal('interest_per_month',12,12);
-            $table->integer('interest_per_month_type');
-            $table->decimal('direct_ref_com',12,12);
-            $table->decimal('overriding_com',12,12);
+            $table->unsignedInteger('term_id')->nullable();
+            $table->decimal('investment_amount', 24, 8);
+            $table->decimal('interest_per_month', 24, 8);
+            $table->decimal('direct_ref_com', 24, 8);
+            $table->decimal('overriding_com', 24, 8);
             $table->timestamps();
         });
     }

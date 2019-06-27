@@ -4,16 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserCardDetail extends Model
+class UserWallet extends Model
 {
     protected $fillable = [
         'user_id',
-        'acct_no',
-        'acct_name',
-        'exp_date',
-        'cvc',
-        'card_no',
-        'card_type'
+        'wallet_amount',
+        'wallet_address',
+        'wallet_category'
     ];
 
     public function user() {

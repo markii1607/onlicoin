@@ -18,7 +18,7 @@ class CreateUserVerificationsTable extends Migration
             $table->unsignedInteger('user_id')->nullable();
             $table->unsignedInteger('verified_id');
             $table->boolean('status')->default(0);
-            $table->decimal('amount', 12, 12)->nullable();
+            $table->decimal('amount', 24, 8)->nullable();
             $table->timestamp('valid_until');
             $table->timestamps();
         });

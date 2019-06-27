@@ -16,7 +16,7 @@ class Controller extends BaseController
      * @param integer $length
      * @return string $code
      */
-    public function generateCode($length = 6) {
+    public static function generateCode($length = 6) {
         $string = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         $strlen = strlen($string);

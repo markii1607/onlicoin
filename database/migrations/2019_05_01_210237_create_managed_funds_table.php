@@ -14,12 +14,11 @@ class CreateManagedFundsTable extends Migration
     {
         Schema::create('managed_funds', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->nullable();
+            $table->integer('term_id')->nullable();
+            $table->integer('formula_id')->nullable();
             $table->datetime('mf_date_start');
             $table->datetime('mf_date_end');
-            $table->decimal('mf_amount',12,12);
-            $table->string('mf_date_range',255);
-            $table->decimal('mf_total_balance',12,12);
+            $table->decimal('mf_amount', 24, 8);
             $table->timestamps();
         });
     }

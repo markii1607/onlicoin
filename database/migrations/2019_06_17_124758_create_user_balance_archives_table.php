@@ -16,11 +16,11 @@ class CreateUserBalanceArchivesTable extends Migration
         Schema::create('user_balance_archives', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id')->index();
-            $table->decimal('current_fund',12,12);
-            $table->decimal('manage_fund',12,12);
-            $table->decimal('subscription_fund',12,12);
-            $table->decimal('oct',12,12);
-            $table->decimal('cash',12,12);
+            $table->decimal('current_fund', 24, 8);
+            $table->decimal('manage_fund', 24, 8);
+            $table->decimal('subscription_fund', 24, 8);
+            $table->decimal('oct', 24, 8);
+            $table->decimal('cash', 24, 8);
             $table->timestamp('adjusted_at');
             $table->timestamps();
         });

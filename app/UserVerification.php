@@ -4,16 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserCardDetail extends Model
+class UserVerification extends Model
 {
     protected $fillable = [
         'user_id',
-        'acct_no',
-        'acct_name',
-        'exp_date',
-        'cvc',
-        'card_no',
-        'card_type'
+        'verified_id',
+        'status',
+        'amount',
+        'valid_until'
     ];
 
     public function user() {

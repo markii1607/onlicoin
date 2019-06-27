@@ -16,9 +16,8 @@ class CreateSubscriptionsTable extends Migration
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id')->nullable();
-            $table->decimal('amount', 12, 12);
-            $table->string('term')->comment('3 Months or 6 Months');
-            $table->decimal('percentage', 5, 2);
+            $table->decimal('amount', 24, 8);
+            $table->decimal('amount_computed', 24, 8);
             $table->datetime('date_subscribed');
             $table->datetime('date_expected_end');
             $table->boolean('is_renewed')->default(0);

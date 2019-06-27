@@ -56,7 +56,7 @@ Route::prefix('payments')->as('payments')->group(function(){
     Route::post('square-paying','Payments\SquareUpController@paying');
 
 });
+
 // Post Routes
 Route::post('/auth-verify', 'PagesController@userVerify')->name('auth-verify');
-
 Route::get('try', 'TryController@index');
