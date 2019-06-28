@@ -83,8 +83,8 @@ class User extends Authenticatable
         return $this->hasMany('App\Referral');
     }
 
-    public function personal_informations() {
-        return $this->hasMany('App\PersonalInformation');
+    public function personal_information() {
+        return $this->hasOne('App\PersonalInformation');
     }
 
     public function payments() {
@@ -93,5 +93,18 @@ class User extends Authenticatable
 
     public function earnings() {
         return $this->hasMany('App\Earning');
+    }
+
+    public function getPersonalInfo() {
+        return $this->personal_information;
+    }
+
+    public static function getReferralUser($refCode) {
+        $referrer = User::where('referral_code', $refCode)->first();
+        if ($referrer) {
+            return $referrer;
+        }
+
+        return '';
     }
 }

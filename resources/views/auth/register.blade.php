@@ -76,13 +76,13 @@
                             </span>
                             @endif
                         </div>
-                        <div class="form-group{{ $errors->has('contactNo') ? ' has-error' : '' }}">
-                            <input id="contactNo" type="text" placeholder="Mobile Number" class="form-control"
-                                name="contactNo" value="{{ old('contactNo') }}" required autofocus>
+                        <div class="form-group{{ $errors->has('contact_no') ? ' has-error' : '' }}">
+                            <input id="contact_no" type="text" placeholder="Mobile Number" class="form-control"
+                                name="contact_no" value="{{ old('contact_no') }}" autofocus>
 
-                            @if ($errors->has('contactNo'))
+                            @if ($errors->has('contact_no'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('contactNo') }}</strong>
+                                <strong>{{ $errors->first('contact_no') }}</strong>
                             </span>
                             @endif
                         </div>
@@ -108,13 +108,13 @@
                             @endif
                         </div>
                         <p class="pull-left"><i><b>I have a promo or referral code</b></i></p>
-                        <div class="form-group{{ $errors->has('user_referralCode') ? ' has-error' : '' }}">
-                            <input id="user_referralCode" type="text" placeholder="Referral Code" class="form-control"
-                                name="user_referralCode" value="{{ old('user_referralCode') }}" autofocus>
+                        <div class="form-group{{ $errors->has('referral_code') ? ' has-error' : '' }}">
+                            <input id="referral_code" type="text" placeholder="Referral Code" class="form-control"
+                                name="referral_code" value="{{ old('referral_code') }}" autofocus>
 
-                            @if ($errors->has('user_referralCode'))
+                            @if ($errors->has('referral_code'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('user_referralCode') }}</strong>
+                                <strong>{{ $errors->first('referral_code') }}</strong>
                             </span>
                             @endif
                         </div>

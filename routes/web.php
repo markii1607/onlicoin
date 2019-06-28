@@ -25,6 +25,8 @@ Route::get('zxc',function(){
 });
 
 Route::group(['middleware' => ['auth', 'verifyUser']], function() {
+    // Get Routes
+    // Pages Controller
     Route::get('/auth-verify', 'PagesController@verify')->name('auth-verify');
     Route::get('/auth-payment', 'PagesController@payment')->name('auth-payment');
     Route::get('/auth-index', 'PagesController@index')->name('auth-index');
@@ -40,23 +42,17 @@ Route::group(['middleware' => ['auth', 'verifyUser']], function() {
     Route::get('/auth-whitepaper', 'PagesController@whitepaper')->name('auth-whitepaper');
     Route::get('/auth-terms', 'PagesController@terms')->name('auth-terms');
     Route::get('/auth-policy', 'PagesController@policy')->name('auth-policy');
-// });
+    // Route::post('/auth-payment-save', 'PaymentController@payment')->name('auth-payment-save');
 
-
-    Route::post('/auth-payment-save', 'PaymentController@payment')->name('auth-payment-save');
+    // Post Routes
+    // Pages Controller
+    Route::post('/auth-verify', 'PagesController@userVerify')->name('auth-verify');
 });
 
-
-
 Route::prefix('payments')->as('payments')->group(function(){
-
-
     Route::get('square-index','Payments\SquareUpController@index');
     Route::get('square-locations','Payments\SquareUpController@get_locations');
     Route::post('square-paying','Payments\SquareUpController@paying');
-
 });
 
-// Post Routes
-Route::post('/auth-verify', 'PagesController@userVerify')->name('auth-verify');
 Route::get('try', 'TryController@index');

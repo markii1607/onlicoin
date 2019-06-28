@@ -74,9 +74,9 @@
         <main class="main">
             <div class="_mail-OCVerify">
                 <h2>Your Verification Code</h2>
-                <h2 class="_mail-OCcode">{{ $user->token }}</h2>
+                <h2 class="_mail-OCcode">{{ $user['token'] }}</h2>
                 <div class="_mail-OCdescWrap">
-                    <p class="_mail-OCdesc">Hello {{$user->first_name }}! Greetings!</p>
+                    <p class="_mail-OCdesc">Hello {{$user['first_name'] }}! Greetings!</p>
                     <p class="_mail-OCdesc">You have been signed up on <b>Onlicoin</b>.</p>
                     <p class="_mail-OCdesc">Please enter the code above on the Onlicoin website to verify your registration.</p>
                 </div>
