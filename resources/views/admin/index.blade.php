@@ -33,41 +33,23 @@
             </div>
             <div class="card-box">
                 <h5 class="m-t-0 m-b-30 panel-name">Verification</h5>
-                <table class="table table-bordered tbl">
-                    <tr>
-                        <td>
-                            <p>Isma want to verify your account.</p>
-                        </td>
-                        <td>
-                            <button class="btn btn-reverse"><i class="fa fa-check"></i></button>
-                        </td>
-                        <td>
-                            <button class="btn btn-reverse"><i class="fa fa-times"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Isma want to verify your account.</p>
-                        </td>
-                        <td>
-                            <button class="btn btn-reverse"><i class="fa fa-check"></i></button>
-                        </td>
-                        <td>
-                            <button class="btn btn-reverse"><i class="fa fa-times"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Isma want to verify your account.</p>
-                        </td>
-                        <td>
-                            <button class="btn btn-reverse"><i class="fa fa-check"></i></button>
-                        </td>
-                        <td>
-                            <button class="btn btn-reverse"><i class="fa fa-times"></i></button>
-                        </td>
-                    </tr>
-                </table>
+                {{ csrf_field() }}
+                <div id="verification-requests-container">
+                    @unless($verification_requests->count())
+                    No Verification Requests
+                    @else
+                    <ul>
+                        @foreach($verification_requests as $verification_request)
+                        <li>
+                            {{ $verification_request->verification_requests->first_name . " " . $verification_request->verification_requests->middle_name . " " . $verification_request->verification_requests->last_name }} wants to verify your account.
+                            <button class="btn btn-danger verification-request-button decline-verification-request" data-id="{{ $verification_request->id }}" data-name="{{ $verification_request->verification_requests->first_name . ' ' . $verification_request->verification_requests->middle_name . ' ' . $verification_request->verification_requests->last_name }}">Decline</button>
+                            <button class="btn btn-default verification-request-button approve-verification-request" data-id="{{ $verification_request->id }}" data-name="{{ $verification_request->verification_requests->first_name . ' ' . $verification_request->verification_requests->middle_name . ' ' . $verification_request->verification_requests->last_name }}">Approve</button>
+                        </li>
+                        @endforeach
+                    </ul>
+                    @endunless
+                </div>
+                <button class="btn btn-default verification-request-button" id="verification-request-prompt">Verify an Account</button>
             </div>
         </div>
 
@@ -233,6 +215,26 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="modal-verification-approval-warning" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-success" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Warning</h5>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to approve <span id="verification-requester"></span>'s verification request.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <form method="POST" action="/user_verifications/1/update">
+                    <button type="button" class="btn btn-danger">Approve</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 @include('admin.footer-inside')
 @stop
 @section('styles')
@@ -244,4 +246,135 @@
             color: #fff;
         }
     </style>
+@stop
+@section('scripts')
+    <script>
+        $(document).ready(function () {
+            var load_verification_requests = function(verification_requests) {
+                var content = '';
+                
+                if(verification_requests.length) {
+                    content += '    <ul>';
+                    verification_requests.forEach(function(item, index) {
+                        content += '    <li>';
+                        content +=          item.verification_requests.first_name + ' ' + item.verification_requests.last_name + ' wants to verify your account.';
+                        content += '        <button class="btn btn-danger verification-request-button decline-verification-request" data-id="' + item.id + '" data-name="' + item.verification_requests.first_name + ' ' + item.verification_requests.last_name + '">Decline</button>';
+                        content += '        <button class="btn btn-default verification-request-button approve-verification-request" data-id="' + item.id + '" data-name="' + item.verification_requests.first_name + ' ' + item.verification_requests.last_name + '">Approve</button>';
+                        content += '    </li>';
+                    });
+                    content += '    </ul>';
+                } else {
+                    content += "No Verification Requests";
+                }
+                
+                $("#verification-requests-container").html(content);
+            };
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                } 
+            });
+
+            $(document).on("click", "#verification-request-prompt", function() {
+                alertify.prompt("Verify an Account", "Account's email address", "",
+                    function(evt, value) {
+                        $(".verification-request-button").prop("disabled", true);
+                        alertify.set('notifier', 'position', 'bottom-left');
+                        alertify.notify('Submitting verification request...', 'warning', 1000, function() {});
+
+                        $.ajax({
+                            method: "POST",
+                            url: "{{ url('/verifications-create') }}",
+                            data: {
+                                email: value
+                            }
+                        }).done(function(response) {
+                            if(response.error == "") {
+                                alertify.dismissAll();
+                                alertify.notify("Verification request successfully submitted to " + response.user_to_be_verified + ".", "success");
+                            } else {
+                                alertify.dismissAll();
+                                alertify.notify(response.error, "error");
+                            }
+                        }).fail(function() {
+                            alertify.dismissAll();
+                            alertify.notify("Cannot connect to server.", "error");
+                        }).always(function() {
+                            $(".verification-request-button").prop("disabled", false);
+                        });
+                    }, function() { });
+            });
+
+            $(document).on("click", ".approve-verification-request", function() {
+                var id = $(this).attr("data-id");
+                var name = $(this).attr("data-name");
+                
+                alertify.confirm("Confirm Verification Request Approval", "Are you sure you want to approve " + name + "'s verification request?", function() {
+                    $(".verification-request-button").prop("disabled", true);
+                    alertify.set('notifier', 'position', 'bottom-left');
+                    alertify.notify('Approving verification request...', 'warning', 1000, function() {});
+
+                    $.ajax({
+                        method: "POST",
+                        url: "{{ url('/verifications-approve') }}",
+                        data: {
+                            _token: $('meta[name="_token"]').attr('content'),
+                            id: id
+                        }
+                    }).done(function(response) {
+                        if(response.error == "") {
+                            load_verification_requests(response.verification_requests);
+                            
+                            alertify.dismissAll();
+                            alertify.success("Verification request successfully approved.");
+                        } else {
+                            alertify.dismissAll();
+                            alertify.notify(response.error, "error");
+                        }
+                    }).fail(function() {
+                        alertify.dismissAll();
+                        alertify.notify("Cannot connect to server.", "error");
+                    }).always(function() {
+                        $(".verification-request-button").prop("disabled", false);
+                    });
+                }, function() {});
+            });
+
+            $(document).on("click", ".decline-verification-request", function() {
+                var id = $(this).attr("data-id");
+                var name = $(this).attr("data-name");
+                
+                alertify.confirm("Confirm Verification Request Approval", "Are you sure you want to decline " + name + "'s verification request?", function() {
+                    $(".verification-request-button").prop("disabled", true);
+                    alertify.set('notifier', 'position', 'bottom-left');
+                    alertify.notify('Declining verification request...', 'warning', 1000, function() {});
+
+                    $.ajax({
+                        method: "POST",
+                        url: "{{ url('/verifications-decline') }}",
+                        data: {
+                            _token: $('meta[name="_token"]').attr('content'),
+                            id: id
+                        }
+                    }).done(function(response) {
+                        if(response.error == "") {
+                            load_verification_requests(response.verification_requests);
+
+                            alertify.dismissAll();
+                            alertify.success("Verification request successfully declined.");
+                        } else {
+                            alertify.dismissAll();
+                            alertify.notify(response.error, "error");
+                        }
+                    }).fail(function() {
+                        alertify.dismissAll();
+                        alertify.notify("Cannot connect to server.", "error");
+                    }).always(function() {
+                        $(".verification-request-button").prop("disabled", false);
+                    });
+                }, function() {});
+            });
+        });
+    </script>
 @stop

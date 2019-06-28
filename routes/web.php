@@ -32,6 +32,10 @@ Route::group(['middleware' => ['auth', 'verifyUser']], function() {
     Route::get('/auth-cout_payment', 'PagesController@cout_payment')->name('auth-cout_payment');
     Route::get('/auth-cout_remittance', 'PagesController@cout_remittance')->name('auth-cout_remittance');
     Route::get('/auth-cout_transfer', 'PagesController@cout_transfer')->name('auth-cout_transfer');
+
+    Route::post('/verifications-create', 'Verification\VerificationController@verification_create')->name('verifications-create');
+    Route::post('/verifications-approve', 'Verification\VerificationController@verification_approve')->name('verifications-approve');
+    Route::post('/verifications-decline', 'Verification\VerificationController@verification_decline')->name('verifications-decline');
 });
 
 // Post Routes

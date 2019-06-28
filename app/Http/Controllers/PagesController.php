@@ -2,17 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use Validator;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\UserVerification;
+use App\UserBalance;
+use App\TransactionLog;
 
 class PagesController extends Controller
 {
     public function index () {
-    	return view('admin.index');
-    }
+        $verification_requests = UserVerification::with('verification_requests')
+            ->where([ ['user_id', '=', auth()->user()->id], ['status', '=', 0], ['valid_until', '>', NOW()] ])
+            ->get();
 
+        return view('admin.index', compact("verification_requests"));
+    }
+    
     public function verify () {
     	return view('pages.verify');
     }
