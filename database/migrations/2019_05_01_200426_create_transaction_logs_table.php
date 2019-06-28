@@ -16,11 +16,11 @@ class CreateTransactionLogsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id')->nullable();
             $table->unsignedInteger('other_user_id')->nullable();
-            $table->string('currency');
+            $table->string('currency')->nullable();
             $table->string('transact_type');
-            $table->string('transact_desc',255)->nullable;
-            $table->longText('transact_array')->nullable;
-            $table->decimal('transact_amount',12,12);
+            $table->string('transact_desc',255)->nullable();
+            $table->longText('transact_array')->nullable();
+            $table->decimal('transact_amount', 24, 8);
             $table->timestamp('transact_date');
             $table->timestamps();
         });

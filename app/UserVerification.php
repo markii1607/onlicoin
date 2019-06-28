@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserVerification extends Model
 {
-
-	protected $fillable = [
-        'user_id', 
-        'verified',
+    protected $fillable = [
+        'user_id',
+        'verified_id',
         'status',
         'amount',
         'valid_until'

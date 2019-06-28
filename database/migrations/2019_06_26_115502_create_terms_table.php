@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWallets1Table extends Migration
+class CreateTermsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +13,11 @@ class CreateWallets1Table extends Migration
      */
     public function up()
     {
-        Schema::create('wallets', function (Blueprint $table) {
+        Schema::create('terms', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->nullable();
-            $table->decimal('wallet_amount',12,12);
-            $table->string('wallet_address', 255);
-            $table->string('wallet_category', 255);
+            $table->string('term_name');
+            $table->decimal('term_percentage', 24, 8);
+            $table->decimal('term_percent_investment', 24, 8)->comment('The percentage he/she will get upon investing money');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateWallets1Table extends Migration
      */
     public function down()
     {
-        Schema::drop('wallets');
+        Schema::dropIfExists('terms');
     }
 }

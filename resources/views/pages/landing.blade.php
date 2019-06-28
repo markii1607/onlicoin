@@ -53,7 +53,7 @@
 
 @section('content')
 <!-- HOME -->
-<section class="home bg-img-1" id="home">
+<section class="home bg-img-landing" id="home">
     <div class="bg-overlay"></div>
     <div class="container">
         <div class="row">
@@ -61,9 +61,9 @@
                 <div class="home-fullscreen">
                     <div class="full-screen">
                         <div class="home-wrapper home-wrapper-alt">
-                            <div class="col-sm-7" id="banner-msg">
-                                <h1 data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1000"><i>Financial Services </i></h1>
-                                <h1 data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="1000"><i>Tailored For All Your Needs.</i></h1>
+                            <div class="col-sm-8" id="banner-msg-landing">
+                                <h1><i>Financial Services </i></h1>
+                                <h1><i>Tailored For All Your Needs.</i></h1>
 
                                 <!--                                    <h1><i>Onlicoin - The Next Generation Online Currency</i></h1>-->
                                 <!--                                    <h1><i>Remittance and Investment Services All in One Place</i></h1>-->
@@ -71,7 +71,7 @@
                                     <a href="{{route('register')}}"><button class="btn btn-signup">SIGN UP</button></a>
                                 </div>
                             </div>
-                            <div class="col-sm-5"></div>
+                            <div class="col-sm-4"></div>
                         </div>
                     </div>
                 </div>

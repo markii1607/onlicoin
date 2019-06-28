@@ -20,7 +20,6 @@
     <link href="alertifyjs/css/alertify.min.css" rel="stylesheet">
     <link href="alertifyjs/css/themes/default.min.css" rel="stylesheet">
     <link href="alertifyjs/css/themes/semantic.min.css" rel="stylesheet">
-
     @yield('styles')
 </head>
 

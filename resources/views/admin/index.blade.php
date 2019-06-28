@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-@include('admin.header')
+@include('admin.header-inside')
 <div class="container w-index">
     <div class="row">
         <div class="col-sm-4">
@@ -21,13 +21,15 @@
                     <div class="col-sm-4 text-center">ETH</div>
                 </div>
                 <div class="row cin-cout-btn">
-                    <div class="col-sm-6">
-                        <a href="{{ route('auth-cin_remittance') }}"><button class=" btn btn-primary inline-block">COIN
-                                IN</button></a>
+                    <div class="col-sm-6 text-center">
+                        <a href="{{ route('auth-cin_remittance') }}">
+                            <button class=" btn btn-primary btn-block">COIN IN</button>
+                        </a>
                     </div>
-                    <div class="col-sm-6">
-                        <a href="{{ route('auth-cout_remittance') }}"><button class=" btn btn-primary inline-block">COIN
-                                OUT</button></a>
+                    <div class="col-sm-6 text-center">
+                        <a href="{{ route('auth-cout_remittance') }}">
+                            <button class=" btn btn-primary btn-block">COIN OUT</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -215,28 +217,19 @@
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="modal-verification-approval-warning" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-success" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Warning</h5>
-            </div>
-            <div class="modal-body">
-                Are you sure you want to approve <span id="verification-requester"></span>'s verification request.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <form method="POST" action="/user_verifications/1/update">
-                    <button type="button" class="btn btn-danger">Approve</button>
-                </form>
-            </div>
+<!-- <div class="wrapper">
+    <div class="container">
+        <div class="row">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odio necessitatibus esse molestias voluptate itaque at sapiente odit? Ex harum excepturi soluta atque ullam dolorum laboriosam facere vero id veritatis.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, beatae nesciunt nisi placeat quasi hic animi, quia perspiciatis ipsa rerum doloremque omnis sint porro laboriosam sapiente consectetur officia in similique.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, mollitia, voluptatum odit sit earum, laborum voluptatem quia aperiam reprehenderit cumque unde architecto. Quam doloremque qui ipsam sequi, impedit nam temporibus!
         </div>
     </div>
-</div>
+</div> -->
 
 @include('admin.footer-inside')
 @stop
+
 @section('styles')
     <style>
         .footer{
@@ -247,6 +240,7 @@
         }
     </style>
 @stop
+
 @section('scripts')
     <script>
         $(document).ready(function () {

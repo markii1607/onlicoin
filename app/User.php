@@ -18,18 +18,21 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 
-        'middle_name', 
-        'last_name',
+        'email',
         'username',
         'password',
-        'email',
-        'contactNo',
-        'user_classification',
-        'user_referralCode',
-        'user_Datejoined',
+        'ip_address',
+        'user_date_joined',
         'verified',
-        'token'
+        'token',
+        'referral_code',
+        'is_subscribed',
+        'is_active',
+        'g_link',
+        'fb_link',
+        'ig_link',
+        'tw_link',
+        'LI_link'
     ];
 
     /**
@@ -40,4 +43,56 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function user_investments() {
+        return $this->hasMany('App\UserInvestment');
+    }
+
+    public function user_card_details() {
+        return $this->hasMany('App\UserCardDetail');
+    }
+
+    public function user_logs() {
+        return $this->hasMany('App\UserLog');
+    }
+
+    public function user_wallets() {
+        return $this->hasMany('App\UserWallet');
+    }
+
+    public function user_verifications() {
+        return $this->hasMany('App\UserVerification');
+    }
+
+    public function user_balance_archives() {
+        return $this->hasMany('App\UserBalanceArchive');
+    }
+
+    public function user_balances() {
+        return $this->hasMany('App\UserBalance');
+    }
+
+    public function transaction_logs() {
+        return $this->hasMany('App\TransactionLog');
+    }
+
+    public function subscriptions() {
+        return $this->hasMany('App\Subscription');
+    }
+
+    public function referrals() {
+        return $this->hasMany('App\Referral');
+    }
+
+    public function personal_informations() {
+        return $this->hasMany('App\PersonalInformation');
+    }
+
+    public function payments() {
+        return $this->hasMany('App\Payment');
+    }
+
+    public function earnings() {
+        return $this->hasMany('App\Earning');
+    }
 }

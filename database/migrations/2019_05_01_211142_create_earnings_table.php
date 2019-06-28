@@ -14,10 +14,10 @@ class CreateEarningsTable extends Migration
     {
         Schema::create('earnings', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->nullable();
+            $table->unsignedInteger('user_id')->nullable();
             $table->datetime('earn_date');
-            $table->decimal('earn_totalBalance',12,12);
-            $table->decimal('earn_amount',12,12);
+            $table->decimal('earn_total_balance', 24, 8);
+            $table->decimal('earn_amount', 24, 8);
             $table->string('earn_remarks',255)->nullable();
             $table->timestamps();
         });
