@@ -14,7 +14,7 @@ class UserVerification extends Model
         'valid_until'
     ];
 
-    public function user() {
-        return $this->belongsTo('App\User');
+    public function verification_requests() {
+    	return $this->hasOne('App\User', 'id', 'verified_id');
     }
 }
