@@ -1,6 +1,6 @@
 @extends('master')
 @section('header')
-@include('pages.header-outside')
+@include('pages.header')
 @stop
 
 @section('content')

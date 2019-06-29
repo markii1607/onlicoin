@@ -54,7 +54,7 @@
                 </strong>
             </div>
             <div>
-                <a href="#">
+                <a href="{{route('auth-about')}}">
                     About Us
                 </a>
             </div>
@@ -129,7 +129,7 @@
         </div>
     </div>
     <div class="copyright">
-        <h5>© 2019 Onlicoin, All rights reserved.<a href="#">Privacy Policy</a> <a href="#">Terms of
+        <h5>© 2019 Onlicoin, All rights reserved.<a href="{{route('auth-policy')}}">Privacy Policy</a> <a href="{{route('auth-terms')}}">Terms of
                     Service</a></h5>
     </div>
     <div class="social-icons">

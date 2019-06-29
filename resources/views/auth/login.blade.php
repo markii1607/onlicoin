@@ -1,9 +1,9 @@
 @extends('master')
 @section('header')
-@include('pages.header-outside')
+@include('pages.header')
 @stop
 @section('content')
-<div class="wrapper">
+<div class="wrapper loginwrap">
     <div class="container">
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4 col-xs-12">

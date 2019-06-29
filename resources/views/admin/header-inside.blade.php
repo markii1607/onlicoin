@@ -64,54 +64,66 @@
         <a class="inline" href="#"><img src="assets/images/buy-sell.png" alt="Buy / Sell"></a>
         <a class="inline" href="#"><img src="assets/images/subscribers.png" alt="Subscribers"></a>
     </div> -->
-    <a href="{{ url('/') }}">
-        <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
-    </a>
 
-    <div>
-        USD
-        <div>$0.80</div>
+
+
+    <div class="top-navigation">
+        <a href="{{ url('/') }}">
+            <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
+        </a>
+
+        <div>
+            USD
+            <div>$0.80</div>
+        </div>
+        <div>
+            BTC
+            <div>$4,001.81</div>
+        </div>
+        <div>
+            ETH
+            <div>$137.48</div>
+        </div>
+        <div>
+            OCT
+            <div>$0.80</div>
+        </div>
+        <div>
+            EUR
+            <div>$0.60</div>
+        </div>
+
+        <ul>
+            <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="fa fa-bell" style="font-size: 23px;vertical-align: middle;"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        Notification
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle avatar">
+                    <p class="inline">Michael Alcala</p>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{route('logout')}}">Logout</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div>
-    <div>
-        BTC
-        <div>$4,001.81</div>
+    <div class="navibar">
+        <a href="{{ route('auth-index') }}"><img src="assets/images/my-wallet.png" alt="My Wallet"></a>
+        <a href="#"><img src="assets/images/earnings.png" alt="Earnings"></a>
+        <a href="#"><img src="assets/images/merchants-partner.png" alt="Merchant Partners"></a>
+        <a href="#"><img src="assets/images/buy-sell.png" alt="Buy / Sell"></a>
+        <a href="#"><img src="assets/images/subscribers.png" alt="Subscribers"></a>
     </div>
-    <div>
-        ETH
-        <div>$137.48</div>
-    </div>
-    <div>
-        OCT
-        <div>$0.80</div>
-    </div>
-    <div>
-        EUR
-        <div>$0.60</div>
-    </div>
-    
-    <ul>
-        <li>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                aria-expanded="false">
-                <i class="fa fa-bell" style="font-size: 23px;vertical-align: middle;"></i>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                    Notification
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                aria-expanded="false">
-                <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle avatar">
-                <p class="inline">Michael Alcala</p>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="{{route('logout')}}">Logout</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
 </header>

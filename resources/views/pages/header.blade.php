@@ -4,8 +4,8 @@
     </a>
     <ul>
         <li><a href="#">FEATURES</a></li>
-        <li><a href="#">WHITEPAPER</a></li>
-        <li><a href="#">ABOUT US</a></li>
-        <li><a href="#">LOGIN</a></li>
+        <li><a href="{{ route('auth-whitepaper') }}">WHITEPAPER</a></li>
+        <li><a href="{{ route('auth-about') }}">ABOUT US</a></li>
+        <li><a href="{{ route('register') }}">SIGN UP</a></li>
     </ul>
 </div>

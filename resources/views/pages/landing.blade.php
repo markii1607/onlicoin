@@ -30,7 +30,7 @@
                     <a href="#features" class="nav-link">FEATURES</a>
                 </li>
                 <li>
-                    <a href="#htu" class="nav-link">WHITEPAPER</a>
+                    <a href="{{route('auth-whitepaper')}}" class="nav-link">WHITEPAPER</a>
                 </li>
                 <li>
                     <a href="{{route('auth-about')}}" class="nav-link">ABOUT US</a>

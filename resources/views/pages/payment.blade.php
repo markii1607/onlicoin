@@ -1,15 +1,12 @@
 @extends('master')
 @section('header')
 @include('pages.header')
-@stop 
+@stop
 
 @section('content')
     <div class="wrapper" id="paymentwrap">
         <div class="container">
-            <div id="blue_oc_logo" class="about">
-                <img src="assets/images/Onlicoin%20Final%20Logo.png" alt="">
-            </div>
-            <div class="card-box" id="cb-payment">
+            <div class="card-box text-center" id="cb-payment">
                 <div class="col-sm-5">
                     <p>Subscription fee:</p>
                     <h1 class="inline"><b>$56.63</b></h1>

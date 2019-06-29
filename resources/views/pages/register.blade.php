@@ -1,23 +1,6 @@
 @extends('master')
 @section('header')
-<header>
-    <div class="container-fluid topnav">
-        <div class="row">
-            <div class="col-sm-3">
-                <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png"
-                        alt="onlicoin logo"></a>
-            </div>
-            <div class="col-sm-9">
-                <ul id="reg-nav-links" class="pull-right text-center">
-                    <li><a href="#">FEATURES</a></li>
-                    <li><a href="#">WHITEPAPER</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">LOGIN</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
+@include('pages.header')
 @stop
 
 @section('content')

@@ -20,31 +20,37 @@ body {
 }
 
 /*Header INSIDE START */
-
 header{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+.top-navigation{
     display: flex;
     justify-content:space-evenly;
     background-color: #0f75bc;
     align-items: center;
     color:white;
-    position: sticky;
+    /* position: sticky;
     top: 0;
     z-index: 1;
-    width: 100%;
+    width: 100%; */
     flex-wrap: wrap;
 }
 
-header li{
+.top-navigation li{
     list-style-type: none;
     display: inline-block;
     padding: 0px 5px;
 }
 
-header li a{
+.top-navigation li a{
     color: white;
 }
 
-header div{
+.top-navigation div{
     text-align: center;
 }
 
@@ -56,6 +62,23 @@ header div{
 #onlicoinlogo {
     height: 60px;
     padding: 10px 10px 5px 10px;
+}
+
+.navibar{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    position: sticky;
+
+}
+
+.navibar img{
+    height: 80px;
+    width: 80px;
+}
+
+.navibar a{
+    margin: 20px 30px;
 }
 
 /*HEADER INSIDE END*/
@@ -185,10 +208,10 @@ header div{
 .panel-name {
     position: absolute;
     background-color: #0f75bc;
-    padding: 10px;
-    top: -14px;
+    padding: 12px;
+    top: -18px;
     left: -3px;
-       border-radius: 5px;
+    border-radius: 5px;
     color: white;
     text-transform: uppercase;
 }
@@ -198,10 +221,9 @@ header div{
 } */
 
 /*login page*/
-/* #loginwrap {
-    padding-top: 75px
-} */
-
+.loginwrap {
+    padding-top: 20px
+}
 .cb-login {
     width: 350px;
     margin: 50px auto;
@@ -219,9 +241,14 @@ header div{
 }
 
 /*payment page*/
+/* .paymentwrap{
+    margin-top: 100px;
+} */
+
 #cb-payment {
-    width: 600px;
     margin: auto;
+    margin-top: 60px !important;
+    width: 600px;
     height: 500px;
 }
 
@@ -230,16 +257,12 @@ header div{
     height: 43px;
 }
 
-#paymentwrap {
-    padding-top: 32px;
-    padding-bottom: 26px;
-}
-
 #cb-payment li {
     padding: 0px 7px;
 }
 
 /*register page*/
+
 .testimonials img {
     height: 80px;
     width: 80px;
@@ -270,10 +293,20 @@ header div{
     margin: 10px 0px;
 }
 
+.inp-field-labels h5{
+    line-height: 20px;
+}
+
 #proc-button button {
     margin-top: 20px;
     width: 45%;
     border-radius: 5px;
+}
+
+.rem-coinout {
+    width: 520px;
+    margin: 50px auto;
+    height: 440px;
 }
 
 .rem-coinin {
@@ -286,10 +319,34 @@ header div{
     margin-bottom: 35px;
 }
 
+.mf-coinout {
+    width: 520px;
+    margin: 50px auto;
+    height: 540px;
+}
+
 .mf-coinin {
     width: 480px;
     margin: 50px auto;
     height: 540px;
+}
+
+.sell-coinout{
+    width: 520px;
+    margin: 50px auto;
+    height: 450px;
+}
+
+.transfer-coinout{
+    width: 520px;
+    margin: 50px auto;
+    height: 650px;
+}
+
+.pay-coinout {
+    width: 520px;
+    margin: 50px auto;
+    height: 500px;
 }
 
 .pay-coinin {
@@ -311,7 +368,7 @@ header div{
 }
 
 .w-index {
-    padding-top: 100px;
+    padding-top: 40px;
     width: 70%;
 }
 

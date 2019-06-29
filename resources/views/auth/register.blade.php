@@ -1,10 +1,20 @@
 @extends('master')
 @section('header')
-@include('pages.header-outside')
+<div class="header">
+    <a href="{{ url('/') }}">
+        <img id="onlicoinlogo" src="assets/images/OC_logwhite.png" alt="onlicoin logo">
+    </a>
+    <ul>
+        <li><a href="#">FEATURES</a></li>
+        <li><a href="{{route('auth-whitepaper')}}">WHITEPAPER</a></li>
+        <li><a href="{{route('auth-about')}}">ABOUT US</a></li>
+        <li><a href="{{route('login')}}">LOGIN</a></li>
+    </ul>
+</div>
 @stop
 @section('content')
-<div class="container">
-    <div class="flex">
+<div class="wrapper loginwrap">
+    <div class="container">
         <div class="row">
             <div class="col-sm-6">
                 <div class="row">
@@ -129,22 +139,6 @@
             </div>
         </div>
     </div>
-
 </div>
 @include('admin.footer-inside')
-@stop
-@section('styles')
-<style>
-    .flex {
-        display: flex;
-        min-height: 80vh;
-        align-items: center;
-        margin: 17px 20px;
-    }
-
-    #topnav {
-        position: relative;
-        background-color: #0F75BC;
-    }
-</style>
 @stop
