@@ -4,7 +4,7 @@
 <script>
     // Build your sqPaymentForm here
     // Set the application ID
-    const applicationId = 'sandbox-sq0idp-9-tDXaJP1gHvtVSKfb1oYw';
+    const applicationId = '{{env(env('SQUARE_PRODUCTION').'SQUARE_APP_ID')}}';
 
     // onGetCardNonce is triggered when the "Pay $1.00" button is clicked
     function onGetCardNonce(event) {

@@ -1,7 +1,24 @@
 @extends('master')
 @section('header')
-@include('pages.header')
-@stop 
+    <header>
+        <div class="container-fluid topnav">
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="{{ url('/') }}"><img id="onlicoinlogo" src="assets/images/OC_logwhite.png"
+                                                  alt="onlicoin logo"></a>
+                </div>
+                <div class="col-sm-9">
+                    <ul id="reg-nav-links" class="pull-right text-center">
+                        <li><a href="#">FEATURES</a></li>
+                        <li><a href="#">WHITEPAPER</a></li>
+                        <li><a href="{{ route('auth-about') }}">ABOUT US</a></li>
+                        <li><a href="{{ route('login') }}"><L></L>OGIN</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+@stop
 
 @section('content')
     <div class="wrapper" id="paymentwrap">
@@ -11,6 +28,7 @@
             </div>
             <div class="card-box" id="cb-payment">
                 <div class="col-sm-5">
+
                     <p>Subscription fee:</p>
                     <h1 class="inline"><b>$56.63</b></h1>
                     <p class="inline">only</p>
@@ -24,19 +42,19 @@
                     <h5>Payment Method</h5>
                     <ul class="list-inline inline-block m-b-0">
                         <li>
-                            <img src="assets/images/Payment_icons/Visa.png" alt="">
+                            <img src="assets/images/Visa.png" alt="">
                         </li>
                         <li>
-                            <img src="assets/images/Payment_icons/mastercard.png" alt="">
+                            <img src="assets/images/mastercard.png" alt="">
                         </li>
                         <li>
-                            <img src="assets/images/Payment_icons/7eleven.png" alt="">
+                            <img src="assets/images/7eleven.png" alt="">
                         </li>
                         <li>
-                            <img src="assets/images/Payment_icons/bitcoin.png" alt="">
+                            <img src="assets/images/bitcoin.png" alt="">
                         </li>
                         <li>
-                            <img src="assets/images/Payment_icons/ethereum.png" alt="">
+                            <img src="assets/images/ethereum.png" alt="">
                         </li>
 
                     </ul>
@@ -114,7 +132,7 @@
             /*display: none;*/
         /*}*/
         .payment_input_form{
-            min-height: 200px;
+            min-height: 180px;
         }
         #sq-creditcard{
             margin: auto;
@@ -124,7 +142,7 @@
             border-radius: 4px;
             border: 1px solid #0f75bc;
             padding: 9px 32px;
-            margin-top: 11px;
+            margin-bottom: 11px;
         }
         #nonce-form .third iframe{
             border: 1px solid #ccc;
@@ -140,5 +158,30 @@
     </script>
 @stop
 @section('footer')
-@include('admin.footer-inside')
+    <footer class="footer">
+        <div class="col-sm-3 text-center">
+            <a href="#">© Onlicoin 2019</a>
+        </div>
+        <div class="col-sm-6 text-center">
+
+            <a href="#">About</a>
+
+            <a href="#">Blog</a>
+
+            <a href="#">Terms</a>
+
+            <a href="#">Privacy</a>
+
+            <a href="#">AML Policy</a>
+        </div>
+        <div class="col-sm-3 text-center">
+            <a href="https://www.facebook.com/onlicointoken"><img src="assets/images/social_icons/fb-icon-oct.png"
+                                                                  alt="Facebook"></a>
+            <a href="https://twitter.com/onlicointoken"><img src="assets/images/social_icons/twitter-icon-oct.png"
+                                                             alt="Twitter"></a>
+            <a href="https://www.linkedin.com/company/onlicoin"><img
+                        src="assets/images/social_icons/linkedin-icon-oct.png" alt="LinkedIn"></a>
+        </div>
+    </footer>
 @stop
+

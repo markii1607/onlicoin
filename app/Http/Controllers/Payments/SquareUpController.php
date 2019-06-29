@@ -16,13 +16,10 @@ class SquareUpController extends Controller
 
     public function paying(Request $request){
 
-        $access_token = 'EAAAENSEjmm4k2-NMDaPJGEdGD_WF_m_i94p9QKTP6JiuFXVoHK6hTrDhnMWYVE6';
-# setup authorization
+        $access_token = env(env('SQUARE_PRODUCTION').'SQUARE_ACCESS_TOKEN');
         \SquareConnect\Configuration::getDefaultConfiguration()->setAccessToken($access_token);
-# create an instance of the Transaction API class
         $transactions_api = new \SquareConnect\Api\TransactionsApi();
-        $location_id = 'CBASEDzeR8CjPx1fr0Tc1W4f4_0gAQ';
-//        $location_id = '51G2H32W1ZJZG';
+        $location_id = env(env('SQUARE_PRODUCTION').'SQUARE_LOCATION');
         $nonce = $request->nonce;
 
         $request_body = array (
