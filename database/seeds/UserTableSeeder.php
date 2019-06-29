@@ -18,6 +18,7 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('master'),
             'ip_address' => Request::ip(),
             'user_date_joined' => date('Y-m-d H:i:s'),
+            'verified' => 1,
             'token' => Controller::generateCode(),
             'referral_code' => Controller::generateCode(8)
         ];
