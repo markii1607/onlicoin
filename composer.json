@@ -19,7 +19,8 @@
         "php-http/message": "^1.7",
         "realrashid/sweet-alert": "^1.1",
         "spatie/laravel-permission": "^2.37",
-        "square/connect": "^2.20190612"
+        "square/connect": "^2.20190612",
+        "symfony/psr-http-message-bridge": "^1.2"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

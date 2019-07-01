@@ -6,6 +6,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use GuzzleHttp\Client;
 
 class Controller extends BaseController
 {
@@ -28,5 +29,16 @@ class Controller extends BaseController
         }
 
         return $code;
+    }
+
+    public function getCurrencyRates($baseCurr = 'USD') {
+        $client = new Client();
+        return $client->get('https://api.exchangerate-api.com/v4/latest/' . strtoupper($baseCurr));
+    }
+
+    public function getConvCurrency($amount = 1, $convCurr = 'PHP', $baseCurr = 'USD') {
+        $currencies = json_decode($this->getCurrencyRates($baseCurr)->getBody());
+        $exrate = $currencies->rates->$convCurr;
+        return $exrate * $amount;
     }
 }

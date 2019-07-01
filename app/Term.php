@@ -8,7 +8,7 @@ class Term extends Model
 {
     protected $fillable = [
         'tern_name',
-        'term_percentage',
+        'term_months',
         'term_percent_investment'
     ];
 

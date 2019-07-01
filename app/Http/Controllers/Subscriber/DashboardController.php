@@ -39,7 +39,6 @@ class DashboardController extends Controller
         $logs = TransactionLog::where('user_id',auth()->user()->id)->orderBy('created_at','desc')->get();
 
         $CUR_CONVERSION['OCT'] = 0.8;
-        $CUR_CONVERSION['USD'] = 51.1;
         $CUR_CONVERSION['BTC'] = .0000000202;
         $CUR_CONVERSION['ETH'] = .000000028302;
 
@@ -50,6 +49,11 @@ class DashboardController extends Controller
         }
 
         $user_mf = ManagedFund::where('user_id',auth()->user()->id)->first();
+
+	// Currency Conversion
+        $CUR_CONVERSION['USD'] = number_format(0.8, 2);
+        $CUR_CONVERSION['EUR'] = $this->getConvCurrency(0.8, 'EUR');
+        $CUR_CONVERSION['PHP'] = $this->getConvCurrency(0.8);
 
         return view('subscriber.dashboard', compact("verification_requests","account_balance",'logs','CUR_CONVERSION','subscriber','user_mf'));
     }
@@ -65,7 +69,6 @@ class DashboardController extends Controller
         $eth = json_decode($response->getBody())->result->price;
 
         return [$btc,$eth];
-
     }
 
 

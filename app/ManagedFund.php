@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ManagedFund extends Model
 {
     protected $fillable = [
+        'user_id',
         'term_id',
         'formula_id',
         'mf_date_start',

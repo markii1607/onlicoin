@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
         'managed_funds',
         'personal_informations',
         'terms',
-        'users'
+        'users',
+        'roles',
+        'model_has_roles'
 	];
 
     public function run()
@@ -24,16 +26,8 @@ class DatabaseSeeder extends Seeder
         Eloquent::unguard();
 
 		foreach ($this->tables as $i => $table) {
-            $this->truncate($table);
             $seed = studly_case(str_singular($table)) . 'TableSeeder';
 			$this->call($seed);	
 		}
     }
-
-    private function truncate($table)
-	{
-	  if (Schema::hasTable($table)) {
-	      DB::table($table)->truncate();
-	  }
-	}
 }

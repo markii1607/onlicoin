@@ -33,7 +33,7 @@
                     <a href="#htu" class="nav-link">WHITEPAPER</a>
                 </li>
                 <li>
-                    <a href="{{route('auth-about')}}" class="nav-link">ABOUT US</a>
+                    <a href="{{route('about')}}" class="nav-link">ABOUT US</a>
                 </li>
                 <li>
                     <a href="{{route('login')}}" class="nav-link">LOGIN</a>

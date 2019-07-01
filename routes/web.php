@@ -78,15 +78,18 @@ Route::group(['middleware' => ['auth', 'verifyUser']], function() {
     Route::get('/auth-terms', 'PagesController@terms')->name('auth-terms');
     Route::get('/auth-policy', 'PagesController@policy')->name('auth-policy');
     Route::post('/auth-payment-save', 'PaymentController@payment')->name('auth-payment-save');
-
+    
     // Post Routes
     // Pages Controller
     Route::post('/auth-payment-save', 'PaymentController@payment')->name('auth-payment-save');
-
+    
     // Verification
     Route::post('/verifications-create', 'Verification\VerificationController@verification_create')->name('verifications-create');
     Route::post('/verifications-approve', 'Verification\VerificationController@verification_approve')->name('verifications-approve');
     Route::post('/verifications-decline', 'Verification\VerificationController@verification_decline')->name('verifications-decline');
+
+    // OTP
+    Route::post('/auth-verify', 'PagesController@userVerify')->name('auth-verify');
 });
 
 Route::prefix('payments')->as('payments')->group(function(){
@@ -96,3 +99,5 @@ Route::prefix('payments')->as('payments')->group(function(){
 });
 
 Route::get('try', 'TryController@index');
+
+Route::get('qwe/{amount}', 'Controller@getConvCurrency');

@@ -3,7 +3,7 @@
             <a href="#">© Onlicoin 2019</a>
         </div>
         <div>
-            <a href="{{ route('auth-about')}}">About</a>
+            <a href="{{ route('about')}}">About</a>
 
             <a href="#">Blog</a>
 
