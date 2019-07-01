@@ -14,6 +14,7 @@ class CreateManagedFundsTable extends Migration
     {
         Schema::create('managed_funds', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
             $table->integer('term_id')->nullable();
             $table->integer('formula_id')->nullable();
             $table->datetime('mf_date_start');

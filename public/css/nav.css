@@ -1,0 +1,48 @@
+#sticky-nav{
+     min-height: 50px;
+     margin-bottom: 20px;
+     border: none;
+}
+#sticky-nav .navbar-header{
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+#onlicoinlogo{
+    width: 62px;
+}
+
+.navbar-nav.navbar-right{
+
+}
+.navbar-nav.navbar-right>li>a{
+    color: #fff;
+    height: 52px;
+}
+.navbar-nav.navbar-right .logged_in_user_dropdown{
+
+    position: relative;
+}
+.navbar-nav.navbar-right .notification_dropdown{
+    padding: 4px 10px;
+    position: relative;
+}
+.navbar-nav.navbar-right .logged_in_user_dropdown>a,
+.navbar-nav.navbar-right .notification_dropdown>a{
+    color: #fff;
+}
+.navbar-nav.navbar-right .logged_in_user_dropdown>.dropdown-menu>li>a,
+.navbar-nav.navbar-right .notification_dropdown>.dropdown-menu>li>a{
+    color: #0c578d;
+    padding: 4px 10px;
+}
+
+.navbar-nav.navbar-right>li>a:active,
+.navbar-nav.navbar-right>li>a:focus,
+.navbar-nav.navbar-right>li>a:hover{
+    background-color: #0c578d;
+}
+.right-dropdown{
+    position: relative;
+}

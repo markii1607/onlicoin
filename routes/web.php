@@ -1,32 +1,64 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Auth::routes();
-Route::get('/', 'PagesController@landing');
-Route::get('/auth-about', 'PagesController@about')->name('auth-about');
-Route::get('logout', function() {
-    Auth::logout();
-    return redirect('/login');
+
+/**
+Website Routes
+ **/
+Route::get('/', function(){
+    return view('web.landing');
 });
+Route::get('/about', function(){
+    return view('web.about');
+})->name('about');
+/**
+WEBSITE END
+ **/
 
 
-Route::get('zxc',function(){
-   auth()->loginUsingId(1);
+
+Route::get('subscriber_backdoor',function(){
+    auth()->loginUsingId(1);
+    return redirect()->route('subscriber.dashboard');
 });
+
+Route::get('logout',function(){
+    auth()->logout();
+    return redirect('/');
+});
+
+Route::get('trigger_subscription','Subscriber\\DashboardController@try_subscription');
+Route::get('trigger_manage_fund','Subscriber\\DashboardController@try_manage_fund');
+Route::get('trigger_manage_fund_interest','Subscriber\\DashboardController@trigger_manage_fund_interest');
+
+Route::get('clear_logs','AdminActionsController@clear_logs')->name('clear_logs');
+Route::get('clear_balance','AdminActionsController@clear_balance')->name('clear_balance');
+
 
 Route::group(['middleware' => ['auth', 'verifyUser']], function() {
-    // Get Routes
-    // Pages Controller
+
+    /**
+     * Regular User Routes - Subscriber
+     */
+    Route::prefix('')->as('subscriber.')->group(function(){
+
+        Route::get('dashboard','Subscriber\\DashboardController@index')->name('dashboard');
+        Route::get('account-settings','Subscriber\\AccountSettingsController@index')->name('account-settings');
+
+        Route::get('coin-in','Subscriber\\CoinInController@index')->name('coin-in');
+    });
+    /**
+     * Admin Routes
+     */
+
+    Route::prefix('control-panel')->as('admin.')->group(function(){
+        Route::get('dashboard',function(){
+            return 'This is admin page';
+        })->name('dashboard');
+
+    });
+
     Route::get('/auth-verify', 'PagesController@verify')->name('auth-verify');
     Route::get('/auth-payment', 'PagesController@payment')->name('auth-payment');
     Route::get('/auth-index', 'PagesController@index')->name('auth-index');
@@ -47,7 +79,7 @@ Route::group(['middleware' => ['auth', 'verifyUser']], function() {
     // Post Routes
     // Pages Controller
     Route::post('/auth-payment-save', 'PaymentController@payment')->name('auth-payment-save');
-    
+
     // Verification
     Route::post('/verifications-create', 'Verification\VerificationController@verification_create')->name('verifications-create');
     Route::post('/verifications-approve', 'Verification\VerificationController@verification_approve')->name('verifications-approve');

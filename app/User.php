@@ -2,6 +2,8 @@
 
 namespace App;
 
+
+use App\Traits\MultiLevel;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
@@ -11,6 +13,7 @@ class User extends Authenticatable
 {
     use Notifiable;
     use HasRoles;
+    use MultiLevel;
 
     /**
      * The attributes that are mass assignable.
@@ -44,6 +47,16 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function subscription() {
+        return $this->hasOne('App\Subscription');
+    }
+    public function manage_fund() {
+        return $this->hasOne('App\ManagedFund');
+    }
+    public function manage_fund_archives() {
+        return $this->hasMany('App\ManagedFund');
+    }
+
     public function user_investments() {
         return $this->hasMany('App\UserInvestment');
     }
@@ -69,7 +82,7 @@ class User extends Authenticatable
     }
 
     public function user_balances() {
-        return $this->hasMany('App\UserBalance');
+        return $this->hasOne('App\UserBalance');
     }
 
     public function transaction_logs() {
@@ -105,7 +118,6 @@ class User extends Authenticatable
         if ($referrer) {
             return $referrer;
         }
-
         return '';
     }
 }

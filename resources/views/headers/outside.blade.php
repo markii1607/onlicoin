@@ -1,8 +1,5 @@
-
-
-@section('header')
 <!-- Navbar -->
-<div class="navbar navbar-custom sticky navbar-fixed-top" role="navigation" id="sticky-nav" style="background-color: #0f75bc;">
+<div class="navbar navbar-custom sticky " role="navigation" id="sticky-nav" style="background-color: #0f75bc;">
     <div class="container">
 
         <!-- Navbar-header -->
@@ -40,7 +37,7 @@
                     <a href="{{route('login')}}" class="nav-link">LOGIN</a>
                 </li>
                 <li>
-                    <a href="{{route('register')}}" class="btn btn-white-bordered navbar-btn">SIGN UP</a>
+                    <a href="{{route('register')}}" class="nav-link">SIGN UP</a>
                 </li>
             </ul>
 
@@ -50,4 +47,3 @@
     <!-- end container -->
 </div>
 <!-- End navbar-custom -->
-@stop

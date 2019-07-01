@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="_token" content="{{csrf_token()}}" />
     <link rel="shortcut icon" href="assets/images/Onlicoin%20Final%20Logo.png">
-    <title>Onlicoin</title>
+    <title>{{env('APP_NAME')}}</title>
     <link rel="stylesheet" href="assets/plugins/morris/morris.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -20,10 +20,21 @@
     <link href="alertifyjs/css/alertify.min.css" rel="stylesheet">
     <link href="alertifyjs/css/themes/default.min.css" rel="stylesheet">
     <link href="alertifyjs/css/themes/semantic.min.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <style>
+        .currency_conversions{
+            display: flex;
+            align-items: center;
+        }
+        .currency_conversions>div{
+            width: 100px;
+        }
+    </style>
     @yield('styles')
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <div class="wrapper">
     @yield('header')
 

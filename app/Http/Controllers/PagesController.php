@@ -11,13 +11,6 @@ use App\TransactionLog;
 
 class PagesController extends Controller
 {
-    public function index () {
-        $verification_requests = UserVerification::with('verification_requests')
-            ->where([ ['user_id', '=', auth()->user()->id], ['status', '=', 0], ['valid_until', '>', NOW()] ])
-            ->get();
-
-        return view('admin.index', compact("verification_requests"));
-    }
     
     public function verify () {
     	return view('pages.verify');
