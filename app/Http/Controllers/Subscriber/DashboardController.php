@@ -51,10 +51,23 @@ class DashboardController extends Controller
 
         $user_mf = ManagedFund::where('user_id',auth()->user()->id)->first();
 
-
-
         return view('subscriber.dashboard', compact("verification_requests","account_balance",'logs','CUR_CONVERSION','subscriber','user_mf'));
     }
+
+    public function get_currency_conversion(){
+
+
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://api.cryptowat.ch/markets/coinbase-pro/btcusd/price');
+        $btc = json_decode($response->getBody())->result->price;
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://api.cryptowat.ch/markets/coinbase-pro/ethusd/price');
+        $eth = json_decode($response->getBody())->result->price;
+
+        return [$btc,$eth];
+
+    }
+
 
     public function trigger_manage_fund_interest(Request $request)
     {

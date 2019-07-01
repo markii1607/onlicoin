@@ -5,11 +5,11 @@
     </div>
     <div>
         BTC
-        <div>$4,001.81</div>
+        <div id="currency_conversions_btc">$0</div>
     </div>
     <div>
         ETH
-        <div>$137.48</div>
+        <div id="currency_conversions_eth">$0</div>
     </div>
     <div>
         OCT

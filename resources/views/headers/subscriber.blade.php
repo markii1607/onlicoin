@@ -33,8 +33,13 @@
                     <a href="{{route('logout')}}">Logout</a>
                 </li>
             </ul>
-
         </div>
     </div>
-
 </header>
+<div class="container-fluid navbar text-center">
+    <a class="inline" href="{{ route('subscriber.dashboard') }}"><img src="assets/images/my-wallet.png" alt="My Wallet"></a>
+    <a class="inline" href="{{ route('subscriber.earnings') }}"><img src="assets/images/earnings.png" alt="Earnings"></a>
+    <a class="inline" href="javascript:void(0)" style="opacity: 0.2"><img src="assets/images/merchants-partner.png" alt="Merchant Partners"></a>
+    <a class="inline" href="javascript:void(0)" style="opacity: 0.2"><img src="assets/images/buy-sell.png" alt="Buy / Sell"></a>
+    <a class="inline" href="{{ route('subscriber.referrals') }}"><img src="assets/images/subscribers.png" alt="Subscribers"></a>
+</div>

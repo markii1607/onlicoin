@@ -73,6 +73,28 @@
     {{--<script src="assets/js/jquery.app.js"></script>--}}
    {{--<script src="assets/js/modernizr.min.js"></script>--}}
    <script src="alertifyjs/alertify.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            fetch_btc();
+        });
+        function fetch_btc(){
+            $.ajax({
+                url:'get_currency_conversion',
+                success:function(data){
+                    console.log(data);
+                    $('#currency_conversions_btc').html("$"+parseFloat(data[0]).format(2));
+                    $('#currency_conversions_eth').html("$"+parseFloat(data[1]).format(2));
+                    setTimeout(fetch_btc,10000);
+                }
+            });
+        }
+        Number.prototype.format = function(n, x, s, c) {
+            var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+                    num = this.toFixed(Math.max(0, ~~n));
+
+            return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+        };
+    </script>
 
    @yield('scripts')
 

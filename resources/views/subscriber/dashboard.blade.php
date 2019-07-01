@@ -107,21 +107,6 @@
         $('a.disabled').on('click',function (e) {
             e.preventDefault();
         });
-        $(document).ready(function () {
-            fetch_btc();
-        });
-
-        function fetch_btc(){
-            $.ajax({
-                url:'https://api.cryptowat.ch/markets/coinbase-pro/btcusd/price',
-                dataType: 'json',
-                contentType: 'json',
-                success:function(data){
-                    console.log(data);
-                    setTimeout(fetch_btc,10000);
-                }
-            });
-        }
     </script>
     @include('subscriber.scripts.verifications')
 @stop

@@ -31,6 +31,7 @@ Route::get('logout',function(){
 Route::get('trigger_subscription','Subscriber\\DashboardController@try_subscription');
 Route::get('trigger_manage_fund','Subscriber\\DashboardController@try_manage_fund');
 Route::get('trigger_manage_fund_interest','Subscriber\\DashboardController@trigger_manage_fund_interest');
+Route::get('get_currency_conversion','Subscriber\\DashboardController@get_currency_conversion');
 
 Route::get('clear_logs','AdminActionsController@clear_logs')->name('clear_logs');
 Route::get('clear_balance','AdminActionsController@clear_balance')->name('clear_balance');
@@ -45,6 +46,8 @@ Route::group(['middleware' => ['auth', 'verifyUser']], function() {
 
         Route::get('dashboard','Subscriber\\DashboardController@index')->name('dashboard');
         Route::get('account-settings','Subscriber\\AccountSettingsController@index')->name('account-settings');
+        Route::get('earnings','Subscriber\\EarningsController@index')->name('earnings');
+        Route::get('referrals','Subscriber\\ReferralsController@index')->name('referrals');
 
         Route::get('coin-in','Subscriber\\CoinInController@index')->name('coin-in');
     });
