@@ -1,6 +1,5 @@
 @extends('master')
 @section('header')
-@include('pages.header-outside')
 @stop
 
 @section('content')
@@ -35,5 +34,4 @@
 @stop
 
 @section('footer')
-@include('admin.footer-inside')
 @stop

@@ -1,6 +1,5 @@
 @extends('master')
 @section('header')
-@include('pages.header-outside')
 @stop
 @section('content')
 <div class="container">
@@ -132,7 +131,6 @@
     </div>
 
 </div>
-@include('admin.footer-inside')
 @stop
 @section('styles')
 <style>

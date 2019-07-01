@@ -11,8 +11,8 @@
                     <ul id="reg-nav-links" class="pull-right text-center">
                         <li><a href="#">FEATURES</a></li>
                         <li><a href="#">WHITEPAPER</a></li>
-                        <li><a href="{{ route('auth-about') }}">ABOUT US</a></li>
-                        <li><a href="{{ route('login') }}"><L></L>OGIN</a></li>
+                        <li><a href="{{ route('about') }}">ABOUT US</a></li>
+                        <li><a href="{{ route('login') }}">LOGIN</a></li>
                     </ul>
                 </div>
             </div>

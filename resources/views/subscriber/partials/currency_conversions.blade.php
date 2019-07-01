@@ -1,7 +1,7 @@
 <div class="currency_conversions">
     <div>
         USD
-        <div>$0.80</div>
+        <div>${{ $CUR_CONVERSION['USD'] }}</div>
     </div>
     <div>
         BTC
@@ -17,6 +17,6 @@
     </div>
     <div>
         EUR
-        <div>$0.60</div>
+        <div>€{{ $CUR_CONVERSION['EUR'] }}</div>
     </div>
 </div>

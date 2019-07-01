@@ -81,7 +81,7 @@ class PagesController extends Controller
         $verified = auth()->user()->verified;
 
         if (!$verified) {
-            $validate = Validator::make($request->all(), [
+            $validate = \Validator::make($request->all(), [
                 'code' => 'required|alpha_num|size:6|'
             ])->validate();
 

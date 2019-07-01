@@ -16,7 +16,7 @@ class CreateTermsTable extends Migration
         Schema::create('terms', function (Blueprint $table) {
             $table->increments('id');
             $table->string('term_name');
-            $table->decimal('term_percentage', 24, 8);
+            $table->integer('term_months');
             $table->decimal('term_percent_investment', 24, 8)->comment('The percentage he/she will get upon investing money');
             $table->timestamps();
         });
